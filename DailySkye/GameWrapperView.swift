@@ -3,14 +3,31 @@ import SwiftUI
 struct GameWrapperView: View {
     let game: GameDescriptor
     @State var showHelp: Bool = false
+    @State private var isSolved = false
 
     var body: some View {
         ZStack {
             Color("background")
                 .ignoresSafeArea()
-            GeometryReader { proxy in
-                GameView(game: game, size: proxy.size)
-            }
+            ZStack {
+                Color.clear
+                VStack(spacing: 0) {
+                    GeometryReader { proxy in
+                        GameView(game: game, size: proxy.size)
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                withAnimation {
+                                    isSolved.toggle()
+                                }
+                            }
+                    }
+                    if isSolved {
+                        GameSolvedView(game: game)
+                            .frame(height: 88)
+                            .transition(.move(edge: .bottom))
+                    }
+                }
+           }
         }
         .sheet(isPresented: $showHelp, content: { HelpView() })
         .navigationBarTitle(game.displayName, displayMode: .inline)
