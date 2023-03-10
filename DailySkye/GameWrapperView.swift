@@ -16,7 +16,7 @@ struct GameWrapperView: View {
         .navigationBarTitle(game.displayName, displayMode: .inline)
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbarColorScheme(.dark, for: .navigationBar)
-        .toolbarBackground(Color("top"), for: .navigationBar)
+        .toolbarBackground(game.color, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 menuView()

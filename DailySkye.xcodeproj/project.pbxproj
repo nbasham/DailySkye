@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20085B8529BB22EA00E5D573 /* GameSolvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20085B8429BB22EA00E5D573 /* GameSolvedView.swift */; };
 		20AB318129B7EA17007A48C2 /* DailySkyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */; };
 		20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318229B7EA17007A48C2 /* ContentView.swift */; };
 		20AB318529B7EA18007A48C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AB318429B7EA18007A48C2 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20085B8429BB22EA00E5D573 /* GameSolvedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSolvedView.swift; sourceTree = "<group>"; };
 		209F4F0A29BB1B7800F50138 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		20AB317D29B7EA17007A48C2 /* DailySkye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailySkye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySkyeApp.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				20AB319829B92F57007A48C2 /* GameListRowView.swift */,
 				20AB319029B7EB9B007A48C2 /* GameListView.swift */,
 				20AB319229B80A62007A48C2 /* GameView.swift */,
+				20085B8429BB22EA00E5D573 /* GameSolvedView.swift */,
 				20AB319429B80FE2007A48C2 /* GameWrapperView.swift */,
 				209F4F0A29BB1B7800F50138 /* Notes.txt */,
 				20AB318429B7EA18007A48C2 /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 				20AB319929B92F57007A48C2 /* GameListRowView.swift in Sources */,
 				20AB318F29B7EA30007A48C2 /* GameDescriptor.swift in Sources */,
 				20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */,
+				20085B8529BB22EA00E5D573 /* GameSolvedView.swift in Sources */,
 				20AB319129B7EB9B007A48C2 /* GameListView.swift in Sources */,
 				20AB318129B7EA17007A48C2 /* DailySkyeApp.swift in Sources */,
 				20AB319329B80A62007A48C2 /* GameView.swift in Sources */,
