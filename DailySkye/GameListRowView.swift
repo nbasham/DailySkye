@@ -6,8 +6,11 @@ struct GameListRowView: View {
 
     var body: some View {
         Color.clear
-            .overlay(alignment: .leading) {
+            .overlay(alignment: .trailing) {
                 Text(game.displayName)
+                    .fontWeight(.semibold)
+                    .font(.system(size: 19))
+                    .offset(x: -UIScreen.main.bounds.width * 0.65)
             }
             .contentShape(Rectangle())
             .onTapGesture {
@@ -20,5 +23,6 @@ struct GameListRowView_Previews: PreviewProvider {
     static var previews: some View {
         GameListRowView(game: .memory)
             .environmentObject(Coordinator())
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }

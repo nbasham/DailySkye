@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		209F4F0A29BB1B7800F50138 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		20AB317D29B7EA17007A48C2 /* DailySkye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailySkye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySkyeApp.swift; sourceTree = "<group>"; };
 		20AB318229B7EA17007A48C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 				20AB319029B7EB9B007A48C2 /* GameListView.swift */,
 				20AB319229B80A62007A48C2 /* GameView.swift */,
 				20AB319429B80FE2007A48C2 /* GameWrapperView.swift */,
+				209F4F0A29BB1B7800F50138 /* Notes.txt */,
 				20AB318429B7EA18007A48C2 /* Assets.xcassets */,
 				20AB318629B7EA18007A48C2 /* Preview Content */,
 			);

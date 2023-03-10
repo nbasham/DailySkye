@@ -1,0 +1,40 @@
+/*
+
+extension HorizontalAlignment {
+    struct TrailingLogo: AlignmentID {
+        static func defaultValue(in d: ViewDimensions) -> CGFloat {
+            d[.trailing]
+        }
+    }
+
+    static let trailingLogo = HorizontalAlignment(TrailingLogo.self)
+}
+
+//                    .alignmentGuide(.leading) { d in d[.trailing] }
+
+            VStack(alignment: .trailingLogo, spacing: 0) {
+
+struct TestView: View {
+    var body: some View {
+        VStack {
+            VStack {
+                Text("aztecs are the only way to fly")
+                    .alignmentGuide(.trailingLogo) { d in d[HorizontalAlignment.trailing] }
+            }
+            VStack {
+                Text("hi there you son of a gun")
+                Text("hi there")
+                Text("hi there you")
+                Text("hi there you son")
+            }
+            VStack(alignment: .trailingLogo) {
+                Text("hi there you son of a gun")
+                Text("hi there")
+                Text("hi there you")
+                Text("hi there you son")
+                    .alignmentGuide(.trailingLogo) { d in d[HorizontalAlignment.trailing] }
+            }
+        }
+    }
+}
+*/

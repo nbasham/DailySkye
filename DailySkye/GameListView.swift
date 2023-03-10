@@ -12,20 +12,35 @@ struct GameListView: View {
                     Color("background")
                         .ignoresSafeArea()
                     listView()
+                        .zIndex(2)
                 }
-                Color.brown
+                Color("top").opacity(0.75)
                     .ignoresSafeArea()
-                    .frame(height: viewModel.bottomHeight)
+                    .frame(height: 88/*viewModel.bottomHeight*/)
             }
-            .navigationBarTitle("Daily Puzzles", displayMode: .inline)
+            .navigationBarTitle("") // hides Back on game screen
+            .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: GameDescriptor.self) { game in
                 coordinator.startGame(game)
             }
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarColorScheme(.dark, for: .navigationBar)
-            .toolbarBackground(Color.brown, for: .navigationBar)
+            .toolbarBackground(Color("top"), for: .navigationBar)
             .toolbar {
-                menuView()
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack(spacing: 2) {
+                        Text("Daily")
+                            .fontWeight(.light)
+                        Text("Puzzles")
+                            .fontWeight(.heavy)
+                    }
+                    .font(.system(size: 19))
+                    .frame(width: UIScreen.main.bounds.width * 0.35)
+                    .ignoresSafeArea()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    menuView()
+                }
             }
             .sheet(isPresented: $showHelp, content: { HelpView() })
         }
@@ -43,14 +58,11 @@ struct GameListView: View {
             }
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
-            .onAppear {
-                viewModel.onAppear(proxy: proxy)
-            }
         }
     }
 
     private func menuView() -> some View {
-        Menu("Menu") {
+        Menu {
             Button("Help", action: { showHelp = true })
             Menu("Play sounds") {
                 Picker(selection: $coordinator.isSoundOn, label: Text("")) {
@@ -66,20 +78,19 @@ struct GameListView: View {
                 }
             }
         }
+        label: {
+            //  clipboard.fill
+            Label("Menu", systemImage: "info.circle.fill")
+                .imageScale(.large)
+        }
     }
 }
 
 extension GameListView {
     class ViewModel: ObservableObject {
-        @Published var rowHeight: CGFloat = 40
-        @Published var bottomHeight: CGFloat = 80
 
         var games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory]
 
-        func onAppear(proxy: GeometryProxy) {
-            rowHeight = proxy.size.width / Double(games.count)
-            bottomHeight = UIScreen.main.bounds.width - 44 - proxy.size.width
-        }
     }
 }
 
