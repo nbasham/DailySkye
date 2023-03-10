@@ -11,7 +11,7 @@ struct GameListView: View {
                 ZStack {
                     Color("background")
                         .ignoresSafeArea()
-                    listView()
+                    gridView()
                         .zIndex(2)
                 }
                 Color("top").opacity(0.75)
@@ -28,15 +28,11 @@ struct GameListView: View {
             .toolbarBackground(Color("top"), for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    HStack(spacing: 2) {
-                        Text("Daily")
-                            .fontWeight(.light)
-                        Text("Puzzles")
-                            .fontWeight(.heavy)
+                    ZStack(alignment: .trailing) {
+                        Color.clear
+                            .frame(width: 200)
+                        logoView()
                     }
-                    .font(.system(size: 19))
-                    .frame(width: UIScreen.main.bounds.width * 0.35)
-                    .ignoresSafeArea()
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     menuView()
@@ -46,19 +42,27 @@ struct GameListView: View {
         }
     }
 
-    private func listView() -> some View {
+    private func logoView() -> some View {
+        HStack(spacing: 2) {
+            Text("Daily")
+                .fontWeight(.light)
+            Text("Puzzles")
+                .fontWeight(.heavy)
+        }
+        .font(.system(size: 19))
+    }
+
+    private func gridView() -> some View {
         GeometryReader { proxy in
-            List {
-                ForEach(viewModel.games) { game in
-                    GameListRowView(game: game)
-                        .listRowSeparator(.hidden)
+            Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
+                ForEach(viewModel.games, id: \.self) { game in
+                    GameListRowView(game: game, height: floor(proxy.size.height / Double(viewModel.games.count)) - 4)
                 }
-                .listRowBackground(Color.clear)
                 .environmentObject(coordinator)
             }
-            .listStyle(.plain)
-            .scrollContentBackground(.hidden)
         }
+        .padding(.top, 4)
+        .padding(.leading, 90)
     }
 
     private func menuView() -> some View {

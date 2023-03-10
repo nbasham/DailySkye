@@ -7,6 +7,10 @@ struct GameView: View {
     var body: some View {
             GeometryReader { proxy in
                 Text("\(proxy.size.debugDescription) \(size.debugDescription)")
+                ZStack {
+                    Color.clear
+                    Text("Solve")
+                }
             }
         .border(game.color)
     }
