@@ -6,6 +6,7 @@ class Coordinator: ObservableObject {
     @Published var level: Int = 0 { didSet { levelChanged() } }
     @Published var animateGame: GameDescriptor?
     @Published var animateBall: GameDescriptor?
+    @Published var isRotating = false
 
     func startGame(_ game: GameDescriptor) -> some View {
         GameWrapperView(game: game)
@@ -13,7 +14,7 @@ class Coordinator: ObservableObject {
 
     func gameSelected(_ game: GameDescriptor) {
         let gameDuration = 0.2
-        let ballDuration = 0.45
+        let ballDuration = 1.45
         let gameAnimation = Animation.spring(blendDuration: gameDuration)
         withAnimation(gameAnimation) {
             animateGame = game
@@ -24,14 +25,23 @@ class Coordinator: ObservableObject {
             withAnimation(gameAnimation) {
                 self.animateGame = nil
             }
+            withAnimation(.linear(duration: ballDuration).repeatForever(autoreverses: false)) {
+                self.isRotating = true
+            }
             withAnimation(ballAnimation) {
                 self.animateBall = game
             }
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration + ballDuration) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration + ballDuration - 0.2) {
             self.navigationStack.append(game)
-            self.animateBall = nil
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration + ballDuration) {
+            withAnimation {
+                self.animateBall = nil
+                self.isRotating = false
+            }
         }
     }
 
