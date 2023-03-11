@@ -9,12 +9,12 @@ class Coordinator: ObservableObject {
     @Published var isRotating = false
 
     func startGame(_ game: GameDescriptor) -> some View {
-        GameWrapperView(game: game)
+        GameHostView(game: game)
     }
 
     func gameSelected(_ game: GameDescriptor) {
         let gameDuration = 0.2
-        let ballDuration = 1.45
+        let ballDuration = 1.05
         let gameAnimation = Animation.spring(blendDuration: gameDuration)
         withAnimation(gameAnimation) {
             animateGame = game

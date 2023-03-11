@@ -4,19 +4,13 @@ struct GamePicker: View {
     @StateObject var coordinator: Coordinator = Coordinator()
     @State var viewModel = GamePicker.ViewModel()
     @State var showHelp: Bool = false
+    let bottomHeight: CGFloat = 72
 
     var body: some View {
         NavigationStack(path: $coordinator.navigationStack) {
             VStack(spacing: 0) {
-                ZStack {
-                    Color("background")
-                        .ignoresSafeArea()
-                    gridView()
-                        .zIndex(2)
-                }
-                Color("top").opacity(0.75)
-                    .ignoresSafeArea()
-                    .frame(height: 88/*viewModel.bottomHeight*/)
+                middleView
+                bottomView
             }
             .navigationBarTitle("") // hides Back on game screen
             .navigationBarTitleDisplayMode(.inline)
@@ -31,7 +25,7 @@ struct GamePicker: View {
                     ZStack(alignment: .trailing) {
                         Color.clear
                             .frame(width: 200)
-                        logoView()
+                        logoView
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -42,7 +36,38 @@ struct GamePicker: View {
         }
     }
 
-    private func logoView() -> some View {
+    private var middleView: some View {
+        ZStack {
+            Color("background")
+                .ignoresSafeArea()
+            ZStack {
+                Color("background")
+                gridView()
+                    .zIndex(2)
+            }
+        }
+    }
+
+    private var bottomView: some View {
+        ZStack(alignment: .leading) {
+            Color("top").opacity(0.5)
+                .ignoresSafeArea()
+                .frame(height: bottomHeight)
+            HStack(spacing: 0) {
+                Circle()
+                    .foregroundColor(Color("top"))
+                    .offset(x: -bottomHeight/2.0)
+                    .ignoresSafeArea()
+                    .frame(height: bottomHeight)
+                factioidView()
+                    .frame(maxHeight: 66)
+            }
+            //  TODO Need a solution that leaves the trailing margin in tact
+            .offset(x: -bottomHeight/2.0)
+        }
+    }
+
+    private var logoView: some View {
         HStack(spacing: 2) {
             Text("Daily")
                 .fontWeight(.light)
@@ -63,6 +88,13 @@ struct GamePicker: View {
         }
         .padding(.top, 4)
         .padding(.leading, 90)
+    }
+
+    private func factioidView() -> some View {
+        let message: LocalizedStringKey = """
+        Visit Apple: [click here](https://apple.com) This is **bold** text, this is *italic* text, and this is ***bold, italic*** text. ~~A strikethrough example~~ `Monospaced works too` 🙃 I recently befriended my neighbor and who is my dad’s age and in a wheelchair. He is so lonely because his wife died right around the time he lost his second leg.
+        """
+        return Text(message).minimumScaleFactor(0.1).padding(.top, 8)
     }
 
     private func menuView() -> some View {
@@ -98,7 +130,7 @@ extension GamePicker {
     }
 }
 
-struct GameListView_Previews: PreviewProvider {
+struct GamePicker_Previews: PreviewProvider {
     static var previews: some View {
         GamePicker()
             .previewInterfaceOrientation(.landscapeRight)

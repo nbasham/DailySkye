@@ -15,7 +15,7 @@
 		20AB318F29B7EA30007A48C2 /* GameDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318E29B7EA30007A48C2 /* GameDescriptor.swift */; };
 		20AB319129B7EB9B007A48C2 /* GamePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319029B7EB9B007A48C2 /* GamePicker.swift */; };
 		20AB319329B80A62007A48C2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319229B80A62007A48C2 /* GameView.swift */; };
-		20AB319529B80FE2007A48C2 /* GameWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319429B80FE2007A48C2 /* GameWrapperView.swift */; };
+		20AB319529B80FE2007A48C2 /* GameHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319429B80FE2007A48C2 /* GameHostView.swift */; };
 		20AB319729B8FA26007A48C2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319629B8FA26007A48C2 /* Coordinator.swift */; };
 		20AB319929B92F57007A48C2 /* GamePickerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319829B92F57007A48C2 /* GamePickerRowView.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +31,7 @@
 		20AB318E29B7EA30007A48C2 /* GameDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDescriptor.swift; sourceTree = "<group>"; };
 		20AB319029B7EB9B007A48C2 /* GamePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePicker.swift; sourceTree = "<group>"; };
 		20AB319229B80A62007A48C2 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		20AB319429B80FE2007A48C2 /* GameWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWrapperView.swift; sourceTree = "<group>"; };
+		20AB319429B80FE2007A48C2 /* GameHostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHostView.swift; sourceTree = "<group>"; };
 		20AB319629B8FA26007A48C2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		20AB319829B92F57007A48C2 /* GamePickerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickerRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +74,7 @@
 				20AB319029B7EB9B007A48C2 /* GamePicker.swift */,
 				20AB319229B80A62007A48C2 /* GameView.swift */,
 				20085B8429BB22EA00E5D573 /* GameSolvedView.swift */,
-				20AB319429B80FE2007A48C2 /* GameWrapperView.swift */,
+				20AB319429B80FE2007A48C2 /* GameHostView.swift */,
 				209F4F0A29BB1B7800F50138 /* Notes.txt */,
 				20AB318429B7EA18007A48C2 /* Assets.xcassets */,
 				20AB318629B7EA18007A48C2 /* Preview Content */,
@@ -160,7 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20AB319529B80FE2007A48C2 /* GameWrapperView.swift in Sources */,
+				20AB319529B80FE2007A48C2 /* GameHostView.swift in Sources */,
 				20AB319929B92F57007A48C2 /* GamePickerRowView.swift in Sources */,
 				20AB318F29B7EA30007A48C2 /* GameDescriptor.swift in Sources */,
 				20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */,

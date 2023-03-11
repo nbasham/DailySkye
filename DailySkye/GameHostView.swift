@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct GameWrapperView: View {
+struct GameHostView: View {
     let game: GameDescriptor
     @State var showHelp: Bool = false
     @State private var isSolved = false
@@ -53,10 +53,10 @@ struct GameWrapperView: View {
 
 }
 
-struct GameWrapperView_Previews: PreviewProvider {
+struct GameHostView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            GameWrapperView(game: GameDescriptor.cryptogram)
+            GameHostView(game: GameDescriptor.cryptogram)
         }
         .previewInterfaceOrientation(.landscapeRight)
     }
