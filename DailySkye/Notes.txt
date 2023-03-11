@@ -1,4 +1,16 @@
 /*
+enum GameListAnimationState {
+    case none, tap, roll, offscreen
+
+    var gameNameOffset: CGFloat {
+        switch self {
+            case .tap:
+                return 20
+            default:
+                return 0
+        }
+    }
+}
 
 extension HorizontalAlignment {
     struct TrailingLogo: AlignmentID {

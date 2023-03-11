@@ -10,7 +10,7 @@ struct GameListRowView: View {
             Text(game.displayName)
                 .fontWeight(.medium)
                 .gridColumnAlignment(.trailing)
-                .offset(x: coordinator.animateGame == game ? 20 : 0)
+                .offset(x: coordinator.animateGame == game ? 30 : 0)
             Circle()
                 .fill(game.color)
                 .frame(height: max(0, height))

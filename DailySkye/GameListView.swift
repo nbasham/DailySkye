@@ -55,7 +55,7 @@ struct GameListView: View {
     private func gridView() -> some View {
         GeometryReader { proxy in
             Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
-                ForEach(viewModel.games, id: \.self) { game in
+                ForEach(viewModel.games, id: \.id) { game in
                     GameListRowView(game: game, height: floor(proxy.size.height / Double(viewModel.games.count)) - 4)
                 }
                 .environmentObject(coordinator)

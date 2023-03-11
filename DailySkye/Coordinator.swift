@@ -14,7 +14,7 @@ class Coordinator: ObservableObject {
     func gameSelected(_ game: GameDescriptor) {
         let gameDuration = 0.2
         let ballDuration = 0.45
-        let gameAnimation = Animation.easeIn(duration: gameDuration)
+        let gameAnimation = Animation.spring(blendDuration: gameDuration)
         withAnimation(gameAnimation) {
             animateGame = game
         }
