@@ -1,8 +1,8 @@
 import SwiftUI
 
-struct GameListView: View {
+struct GamePicker: View {
     @StateObject var coordinator: Coordinator = Coordinator()
-    @State var viewModel = GameListView.ViewModel()
+    @State var viewModel = GamePicker.ViewModel()
     @State var showHelp: Bool = false
 
     var body: some View {
@@ -56,7 +56,7 @@ struct GameListView: View {
         GeometryReader { proxy in
             Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
                 ForEach(viewModel.games, id: \.id) { game in
-                    GameListRowView(game: game, height: floor(proxy.size.height / Double(viewModel.games.count)) - 4)
+                    GamePickerRowView(game: game, height: floor(proxy.size.height / Double(viewModel.games.count)) - 4)
                 }
                 .environmentObject(coordinator)
             }
@@ -90,7 +90,7 @@ struct GameListView: View {
     }
 }
 
-extension GameListView {
+extension GamePicker {
     class ViewModel: ObservableObject {
 
         var games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory]
@@ -100,7 +100,7 @@ extension GameListView {
 
 struct GameListView_Previews: PreviewProvider {
     static var previews: some View {
-        GameListView()
+        GamePicker()
             .previewInterfaceOrientation(.landscapeRight)
     }
 }

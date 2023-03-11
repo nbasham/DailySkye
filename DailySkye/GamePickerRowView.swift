@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct GameListRowView: View {
+struct GamePickerRowView: View {
     @EnvironmentObject var coordinator: Coordinator
     let game: GameDescriptor
     var height: CGFloat = 44
@@ -36,9 +36,9 @@ struct GameListRowView: View {
 struct GameListRowView_Previews: PreviewProvider {
     static var previews: some View {
         Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
-            GameListRowView(game: .memory, height: 44)
+            GamePickerRowView(game: .memory, height: 44)
                 .environmentObject(Coordinator())
-            GameListRowView(game: .word_search, height: 44)
+            GamePickerRowView(game: .word_search, height: 44)
                 .environmentObject(Coordinator())
         }
         .padding(.leading, 100)
