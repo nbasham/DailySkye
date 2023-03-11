@@ -19,7 +19,7 @@ struct GameListRowView: View {
                     Text("play")
                         .fontWeight(.semibold)
                         .font(.system(size: 13, design: .rounded))
-                        .foregroundColor(.white.opacity(0.75))
+                        .foregroundColor(.white.opacity(0.8))
                         .offset(y: -1)
                 )
                 .rotationEffect(.degrees(coordinator.animateBall == game && coordinator.isRotating ? 5*360 : 0))
