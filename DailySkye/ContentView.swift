@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var coordinator: Coordinator = Coordinator()
+
     var body: some View {
-        GamePicker()
+        NavigationStack(path: $coordinator.navigationStack) {
+            coordinator.start()
+                .navigationDestination(for: GameDescriptor.self) { game in
+                    GameHostView(game: game)
+                }
+        }
     }
 }
 

@@ -1,39 +1,33 @@
 import SwiftUI
 
 struct GamePicker: View {
-    @StateObject var coordinator: Coordinator = Coordinator()
-    @State var viewModel = GamePicker.ViewModel()
+    @ObservedObject var viewModel: GamePicker.ViewModel
     @State var showHelp: Bool = false
-    let bottomHeight: CGFloat = 72
+    private let bottomHeight: CGFloat = 72
 
     var body: some View {
-        NavigationStack(path: $coordinator.navigationStack) {
-            VStack(spacing: 0) {
-                middleView
-                bottomView
-            }
-            .navigationBarTitle("") // hides Back on game screen
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(for: GameDescriptor.self) { game in
-                coordinator.startGame(game)
-            }
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
-            .toolbarBackground(Color("top"), for: .navigationBar)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    ZStack(alignment: .trailing) {
-                        Color.clear
-                            .frame(width: 200)
-                        logoView
-                    }
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    menuView()
-                }
-            }
-            .sheet(isPresented: $showHelp, content: { HelpView() })
+        VStack(spacing: 0) {
+            middleView
+            bottomView
         }
+        .navigationBarTitle("") // hides Back on game screen
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarBackground(Color("top"), for: .navigationBar)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                ZStack(alignment: .trailing) {
+                    Color.clear
+                        .frame(width: 200)
+                    logoView
+                }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                menuView()
+            }
+        }
+        .sheet(isPresented: $showHelp, content: { HelpView() })
     }
 
     private var middleView: some View {
@@ -81,9 +75,9 @@ struct GamePicker: View {
         GeometryReader { proxy in
             Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
                 ForEach(viewModel.games, id: \.id) { game in
-                    GamePickerRowView(game: game, height: floor(proxy.size.height / Double(viewModel.games.count)) - 4)
+                    GamePickerRowView(game: game, viewModel: viewModel, height: floor(proxy.size.height / Double(viewModel.games.count)) - 4)
                 }
-                .environmentObject(coordinator)
+//                .environmentObject(coordinator)
             }
         }
         .padding(.top, 4)
@@ -101,13 +95,13 @@ struct GamePicker: View {
         Menu {
             Button("Help", action: { showHelp = true })
             Menu("Play sounds") {
-                Picker(selection: $coordinator.isSoundOn, label: Text("")) {
+                Picker(selection: $viewModel.isSoundOn, label: Text("")) {
                     Text("No").tag(0)
                     Text("Yes").tag(1)
                 }
             }
             Menu("Level") {
-                Picker(selection: $coordinator.level, label: Text("Level")) {
+                Picker(selection: $viewModel.level, label: Text("Level")) {
                     Text("Easy").tag(0)
                     Text("Medium").tag(1)
                     Text("Hard").tag(2)
@@ -124,15 +118,73 @@ struct GamePicker: View {
 
 extension GamePicker {
     class ViewModel: ObservableObject {
+        let games: [GameDescriptor]
+        weak var delegate: AppService?
+        @Published var isSoundOn: Bool = true { didSet { soundOnChanged() } }
+        @Published var level: Int = 0 { didSet { levelChanged() } }
+        @Published var animateGame: GameDescriptor?
+        @Published var animateBall: GameDescriptor?
+        @Published var isRotating = false
 
-        var games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory]
+        init(games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory], delegate: AppService? = nil) {
+            self.games = games
+            self.delegate = delegate
+        }
 
+        func gameSelected(_ game: GameDescriptor) {
+            startGameSelectedAnimation(game) {
+                self.delegate?.gamePicked(game)
+//                self.coordinator.gameSelected(game)
+            }
+        }
+
+        func startGameSelectedAnimation(_ game: GameDescriptor, completion: @escaping () -> ()) {
+            let gameDuration = 0.2
+            let ballDuration = 1.05
+            let gameAnimation = Animation.spring(blendDuration: gameDuration)
+            withAnimation(gameAnimation) {
+                animateGame = game
+            }
+
+            let ballAnimation = Animation.easeIn(duration: ballDuration)
+            DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration) {
+                withAnimation(gameAnimation) {
+                    self.animateGame = nil
+                }
+                withAnimation(.linear(duration: ballDuration).repeatForever(autoreverses: false)) {
+                    self.isRotating = true
+                }
+                withAnimation(ballAnimation) {
+                    self.animateBall = game
+                }
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration + ballDuration - 0.2) {
+                completion()
+                //                self.navigationStack.append(game)
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration + ballDuration) {
+                withAnimation {
+                    self.animateBall = nil
+                    self.isRotating = false
+                }
+            }
+        }
+
+        private func soundOnChanged() {
+            delegate?.playSounds(isSoundOn)
+        }
+
+        private func levelChanged() {
+            delegate?.setLevel(level)
+        }
     }
 }
 
 struct GamePicker_Previews: PreviewProvider {
     static var previews: some View {
-        GamePicker()
+        GamePicker(viewModel: GamePicker.ViewModel())
             .previewInterfaceOrientation(.landscapeRight)
     }
 }
