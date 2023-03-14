@@ -75,7 +75,7 @@ struct GamePicker: View {
         GeometryReader { proxy in
             Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
                 ForEach(viewModel.games, id: \.id) { game in
-                    GamePickerRowView(game: game, viewModel: viewModel, height: floor(proxy.size.height / Double(viewModel.games.count)) - 4)
+                    GamePickerRowView(game: game, viewModel: viewModel, height: min(54, floor(proxy.size.height / Double(viewModel.games.count))) - 4)
                 }
 //                .environmentObject(coordinator)
             }

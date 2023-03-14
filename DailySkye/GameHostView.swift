@@ -3,6 +3,7 @@ import SwiftUI
 struct GameHostView: View {
     @ObservedObject var viewModel: GameHostView.ViewModel
     @State var showHelp: Bool = false
+    @EnvironmentObject var settings: Settings
 
     var body: some View {
         ZStack {
@@ -12,13 +13,18 @@ struct GameHostView: View {
                 Color.clear
                 VStack(spacing: 0) {
                     GeometryReader { proxy in
-                        GameView(viewModel: viewModel, size: proxy.size)
-                            .contentShape(Rectangle())
-                            .onTapGesture {
-                                withAnimation {
-                                    viewModel.solved()
-                                }
-                            }
+                        switch(viewModel.game) {
+                            case .sudoku:
+                                SudokuView(viewModel: viewModel)
+                            default:
+                                GameView(viewModel: viewModel, size: proxy.size)
+                                    .contentShape(Rectangle())
+                                    .onTapGesture {
+                                        withAnimation {
+                                            viewModel.solved()
+                                        }
+                                    }
+                        }
                     }
                     if viewModel.showSolved {
                         GameSolvedView(viewModel: viewModel)
@@ -43,6 +49,7 @@ struct GameHostView: View {
     private func menuView() -> some View {
         Menu {
             Button("Help", action: { showHelp = true } )
+            Button("Toggle settings soundOn", action: { settings.soundOn.toggle() } )
         }
         label: {
             Label("Menu", systemImage: "info.circle.fill")
@@ -75,5 +82,23 @@ struct GameHostView_Previews: PreviewProvider {
             GameHostView(viewModel: GameHostView.ViewModel(game: .cryptogram))
         }
         .previewInterfaceOrientation(.landscapeRight)
+    }
+}
+
+struct SudokuView: View {
+    @ObservedObject var viewModel: GameHostView.ViewModel
+    @EnvironmentObject var settings: Settings
+
+    var body: some View {
+        VStack {
+            Text("sound on \(settings.soundOn ? "true" : "false")")
+            Button(action: {
+                withAnimation {
+                    viewModel.solved()
+                }
+            }, label: {
+                Text("Solve it")
+            })
+        }
     }
 }
