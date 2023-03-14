@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct GameSolvedView: View {
-    let game: GameDescriptor
+    @ObservedObject var viewModel: GameHostView.ViewModel
 
     var body: some View {
         ZStack {
-            game.color
+            viewModel.game.color
         }
         .ignoresSafeArea()
     }
@@ -20,6 +20,6 @@ struct GameSolvedView: View {
 
 struct GameSolvedView_Previews: PreviewProvider {
     static var previews: some View {
-        GameSolvedView(game: .memory)
+        GameSolvedView(viewModel: GameHostView.ViewModel(game: .cryptogram))
     }
 }

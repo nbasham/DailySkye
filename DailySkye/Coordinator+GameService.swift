@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 
 protocol GameService: AnyObject {
     func back()
@@ -10,24 +10,18 @@ protocol GameService: AnyObject {
 }
 
 extension Coordinator: GameService {
-    func back() {
+    func back() { }
 
-    }
+    func startAgain() { }
 
-    func startAgain() {
-
-    }
-
-    func solveRequest() {
-
-    }
+    func solveRequest() { }
 
     func solved() {
-
+        withAnimation {
+            gameViewModel?.showSolved.toggle()
+        }
     }
 
-    func didSolve(_ game: GameDescriptor) {
-        
-    }
+    func didSolve(_ game: GameDescriptor) { }
 
 }

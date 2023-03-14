@@ -2,8 +2,8 @@ import SwiftUI
 
 class Coordinator: ObservableObject {
     @Published var navigationStack: [GameDescriptor] = []
-    private var gamePickerViewModel = GamePicker.ViewModel()
-    private var gameViewModel: GameHostView.ViewModel?
+    internal var gamePickerViewModel = GamePicker.ViewModel()
+    internal var gameViewModel: GameHostView.ViewModel?
 
     func start() -> some View {
         let games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory]
@@ -13,6 +13,6 @@ class Coordinator: ObservableObject {
 
     func startGame(_ game: GameDescriptor) -> some View {
         gameViewModel = GameHostView.ViewModel(game: game, delegate: self)
-        return GameHostView(game: game)
+        return GameHostView(viewModel: gameViewModel!)
     }
 }

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct GameView: View {
-    let game: GameDescriptor
+    @ObservedObject var viewModel: GameHostView.ViewModel
     var size: CGSize
 
     var body: some View {
@@ -12,13 +12,13 @@ struct GameView: View {
                     Text("Solve")
                 }
             }
-        .border(game.color)
+            .border(viewModel.game.color)
     }
 }
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView(game: GameDescriptor.cryptogram, size: .zero)
+        GameView(viewModel: GameHostView.ViewModel(game: GameDescriptor.cryptogram), size: .zero)
             .previewLayout(.sizeThatFits)
             .previewInterfaceOrientation(.landscapeRight)
     }

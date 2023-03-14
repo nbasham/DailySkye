@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct GameHostView: View {
-    let game: GameDescriptor
+    @ObservedObject var viewModel: GameHostView.ViewModel
     @State var showHelp: Bool = false
-    @State private var isSolved = false
 
     var body: some View {
         ZStack {
@@ -13,16 +12,16 @@ struct GameHostView: View {
                 Color.clear
                 VStack(spacing: 0) {
                     GeometryReader { proxy in
-                        GameView(game: game, size: proxy.size)
+                        GameView(viewModel: viewModel, size: proxy.size)
                             .contentShape(Rectangle())
                             .onTapGesture {
                                 withAnimation {
-                                    isSolved.toggle()
+                                    viewModel.solved()
                                 }
                             }
                     }
-                    if isSolved {
-                        GameSolvedView(game: game)
+                    if viewModel.showSolved {
+                        GameSolvedView(viewModel: viewModel)
                             .frame(height: 88)
                             .transition(.move(edge: .bottom))
                     }
@@ -30,10 +29,10 @@ struct GameHostView: View {
            }
         }
         .sheet(isPresented: $showHelp, content: { HelpView() })
-        .navigationBarTitle(game.displayName, displayMode: .inline)
+        .navigationBarTitle(viewModel.game.displayName, displayMode: .inline)
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbarColorScheme(.dark, for: .navigationBar)
-        .toolbarBackground(game.color, for: .navigationBar)
+        .toolbarBackground(viewModel.game.color, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 menuView()
@@ -57,13 +56,14 @@ extension GameHostView {
     class ViewModel: ObservableObject {
         let game: GameDescriptor
         weak var delegate: GameService?
+        @Published var showSolved = false
 
         init(game: GameDescriptor, delegate: GameService? = nil) {
             self.game = game
             self.delegate = delegate
         }
 
-        private func solved() {
+        func solved() {
             delegate?.solved()
         }
     }
@@ -72,7 +72,7 @@ extension GameHostView {
 struct GameHostView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            GameHostView(game: GameDescriptor.cryptogram)
+            GameHostView(viewModel: GameHostView.ViewModel(game: .cryptogram))
         }
         .previewInterfaceOrientation(.landscapeRight)
     }
