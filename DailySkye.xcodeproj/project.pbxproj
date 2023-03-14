@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		20085B8529BB22EA00E5D573 /* GameSolvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20085B8429BB22EA00E5D573 /* GameSolvedView.swift */; };
+		207E25C529C0090B00FCA8BF /* Coordinator+AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25C429C0090B00FCA8BF /* Coordinator+AppService.swift */; };
+		207E25C729C00B8400FCA8BF /* Coordinator+GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25C629C00B8400FCA8BF /* Coordinator+GameService.swift */; };
 		20AB318129B7EA17007A48C2 /* DailySkyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */; };
 		20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318229B7EA17007A48C2 /* ContentView.swift */; };
 		20AB318529B7EA18007A48C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AB318429B7EA18007A48C2 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		20085B8429BB22EA00E5D573 /* GameSolvedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSolvedView.swift; sourceTree = "<group>"; };
+		207E25C429C0090B00FCA8BF /* Coordinator+AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+AppService.swift"; sourceTree = "<group>"; };
+		207E25C629C00B8400FCA8BF /* Coordinator+GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+GameService.swift"; sourceTree = "<group>"; };
 		209F4F0A29BB1B7800F50138 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		20AB317D29B7EA17007A48C2 /* DailySkye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailySkye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySkyeApp.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 			children = (
 				20AB318229B7EA17007A48C2 /* ContentView.swift */,
 				20AB319629B8FA26007A48C2 /* Coordinator.swift */,
+				207E25C429C0090B00FCA8BF /* Coordinator+AppService.swift */,
+				207E25C629C00B8400FCA8BF /* Coordinator+GameService.swift */,
 				20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */,
 				20AB318E29B7EA30007A48C2 /* GameDescriptor.swift */,
 				20AB319829B92F57007A48C2 /* GamePickerRowView.swift */,
@@ -160,12 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207E25C529C0090B00FCA8BF /* Coordinator+AppService.swift in Sources */,
 				20AB319529B80FE2007A48C2 /* GameHostView.swift in Sources */,
 				20AB319929B92F57007A48C2 /* GamePickerRowView.swift in Sources */,
 				20AB318F29B7EA30007A48C2 /* GameDescriptor.swift in Sources */,
 				20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */,
 				20085B8529BB22EA00E5D573 /* GameSolvedView.swift in Sources */,
 				20AB319129B7EB9B007A48C2 /* GamePicker.swift in Sources */,
+				207E25C729C00B8400FCA8BF /* Coordinator+GameService.swift in Sources */,
 				20AB318129B7EA17007A48C2 /* DailySkyeApp.swift in Sources */,
 				20AB319329B80A62007A48C2 /* GameView.swift in Sources */,
 				20AB319729B8FA26007A48C2 /* Coordinator.swift in Sources */,

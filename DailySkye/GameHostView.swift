@@ -53,6 +53,22 @@ struct GameHostView: View {
 
 }
 
+extension GameHostView {
+    class ViewModel: ObservableObject {
+        let game: GameDescriptor
+        weak var delegate: GameService?
+
+        init(game: GameDescriptor, delegate: GameService? = nil) {
+            self.game = game
+            self.delegate = delegate
+        }
+
+        private func solved() {
+            delegate?.solved()
+        }
+    }
+}
+
 struct GameHostView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {

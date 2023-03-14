@@ -14,7 +14,7 @@ struct ContentView: View {
         NavigationStack(path: $coordinator.navigationStack) {
             coordinator.start()
                 .navigationDestination(for: GameDescriptor.self) { game in
-                    GameHostView(game: game)
+                    coordinator.startGame(game)
                 }
         }
     }
