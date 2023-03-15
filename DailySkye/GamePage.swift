@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct GameHostView: View {
-    @ObservedObject var viewModel: GameHostView.ViewModel
+struct GamePage: View {
+    @ObservedObject var viewModel: GamePage.ViewModel
     @State var showHelp: Bool = false
     @EnvironmentObject var settings: Settings
 
@@ -59,7 +59,7 @@ struct GameHostView: View {
 
 }
 
-extension GameHostView {
+extension GamePage {
     class ViewModel: ObservableObject {
         let game: GameDescriptor
         weak var delegate: GameService?
@@ -76,17 +76,17 @@ extension GameHostView {
     }
 }
 
-struct GameHostView_Previews: PreviewProvider {
+struct GamePage_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            GameHostView(viewModel: GameHostView.ViewModel(game: .cryptogram))
+            GamePage(viewModel: GamePage.ViewModel(game: .cryptogram))
         }
         .previewInterfaceOrientation(.landscapeRight)
     }
 }
 
 struct SudokuView: View {
-    @ObservedObject var viewModel: GameHostView.ViewModel
+    @ObservedObject var viewModel: GamePage.ViewModel
     @EnvironmentObject var settings: Settings
 
     var body: some View {

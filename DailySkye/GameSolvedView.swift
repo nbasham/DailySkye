@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameSolvedView: View {
-    @ObservedObject var viewModel: GameHostView.ViewModel
+    @ObservedObject var viewModel: GamePage.ViewModel
 
     var body: some View {
         ZStack {
@@ -20,6 +20,6 @@ struct GameSolvedView: View {
 
 struct GameSolvedView_Previews: PreviewProvider {
     static var previews: some View {
-        GameSolvedView(viewModel: GameHostView.ViewModel(game: .cryptogram))
+        GameSolvedView(viewModel: GamePage.ViewModel(game: .cryptogram))
     }
 }

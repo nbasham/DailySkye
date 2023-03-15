@@ -2,7 +2,7 @@ import SwiftUI
 
 struct GamePickerRowView: View {
     let game: GameDescriptor
-    @ObservedObject var viewModel: GamePicker.ViewModel
+    @ObservedObject var viewModel: HomePage.ViewModel
     var height: CGFloat = 44
     @State private var isRotating = 0.0
 
@@ -44,8 +44,8 @@ struct GamePickerRowView: View {
 struct GameListRowView_Previews: PreviewProvider {
     static var previews: some View {
         Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
-            GamePickerRowView(game: .memory, viewModel: GamePicker.ViewModel(), height: 44)
-            GamePickerRowView(game: .word_search, viewModel: GamePicker.ViewModel(), height: 44)
+            GamePickerRowView(game: .memory, viewModel: HomePage.ViewModel(), height: 44)
+            GamePickerRowView(game: .word_search, viewModel: HomePage.ViewModel(), height: 44)
         }
         .padding(.leading, 100)
             .previewInterfaceOrientation(.landscapeRight)

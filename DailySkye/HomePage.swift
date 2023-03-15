@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct GamePicker: View {
-    @ObservedObject var viewModel: GamePicker.ViewModel
+struct HomePage: View {
+    @ObservedObject var viewModel: HomePage.ViewModel
     @State var showHelp: Bool = false
     private let bottomHeight: CGFloat = 72
 
@@ -116,7 +116,7 @@ struct GamePicker: View {
     }
 }
 
-extension GamePicker {
+extension HomePage {
     class ViewModel: ObservableObject {
         let games: [GameDescriptor]
         weak var delegate: AppService?
@@ -182,9 +182,9 @@ extension GamePicker {
     }
 }
 
-struct GamePicker_Previews: PreviewProvider {
+struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        GamePicker(viewModel: GamePicker.ViewModel())
+        HomePage(viewModel: HomePage.ViewModel())
             .previewInterfaceOrientation(.landscapeRight)
     }
 }
