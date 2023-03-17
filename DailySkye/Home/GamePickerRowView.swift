@@ -28,7 +28,8 @@ struct GamePickerRowView: View {
     var gameBall: some View {
         Circle()
             .fill(game.color)
-            .frame(height: max(0, height))
+            .aspectRatio(1, contentMode: .fit)
+//            .frame(height: max(0, height))
             .overlay(
                 Text("play")
                     .fontWeight(.semibold)

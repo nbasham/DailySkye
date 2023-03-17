@@ -53,6 +53,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		207E25CE29C3F49300FCA8BF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				20AB319029B7EB9B007A48C2 /* HomePage.swift */,
+				20AB319829B92F57007A48C2 /* GamePickerRowView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		207E25CF29C3F4B000FCA8BF /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				20AB319429B80FE2007A48C2 /* GamePage.swift */,
+				20AB319229B80A62007A48C2 /* GameView.swift */,
+				20085B8429BB22EA00E5D573 /* GameSolvedView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		20AB317429B7EA17007A48C2 = {
 			isa = PBXGroup;
 			children = (
@@ -78,11 +97,8 @@
 				207E25C629C00B8400FCA8BF /* Coordinator+Game.swift */,
 				20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */,
 				20AB318E29B7EA30007A48C2 /* GameDescriptor.swift */,
-				20AB319429B80FE2007A48C2 /* GamePage.swift */,
-				20AB319029B7EB9B007A48C2 /* HomePage.swift */,
-				20AB319829B92F57007A48C2 /* GamePickerRowView.swift */,
-				20085B8429BB22EA00E5D573 /* GameSolvedView.swift */,
-				20AB319229B80A62007A48C2 /* GameView.swift */,
+				207E25CE29C3F49300FCA8BF /* Home */,
+				207E25CF29C3F4B000FCA8BF /* Game */,
 				207E25C829C0561800FCA8BF /* Settings.swift */,
 				209F4F0A29BB1B7800F50138 /* Notes.txt */,
 				20AB318429B7EA18007A48C2 /* Assets.xcassets */,

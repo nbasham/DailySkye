@@ -5,14 +5,14 @@ struct GameView: View {
     var size: CGSize
 
     var body: some View {
-            GeometryReader { proxy in
-                Text("\(proxy.size.debugDescription) \(size.debugDescription)")
-                ZStack {
-                    Color.clear
-                    Text("Solve")
-                }
+        ZStack {
+            Color.clear
+            VStack {
+                Text("Solve")
+                Text("\(size.debugDescription)")
             }
-            .border(viewModel.game.color)
+        }
+        .border(viewModel.game.color)
     }
 }
 

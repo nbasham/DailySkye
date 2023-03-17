@@ -75,10 +75,12 @@ struct HomePage: View {
         GeometryReader { proxy in
             Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
                 ForEach(viewModel.games, id: \.id) { game in
-                    GamePickerRowView(game: game, viewModel: viewModel, height: min(54, floor(proxy.size.height / Double(viewModel.games.count))) - 4)
+                    GamePickerRowView(game: game, viewModel: viewModel, height:viewModel.rowHeight(size: proxy.size))
+//                    GamePickerRowView(game: game, viewModel: viewModel, height: min(54, floor(proxy.size.height / Double(viewModel.games.count))) - 4)
                 }
 //                .environmentObject(coordinator)
             }
+            .frame(maxHeight: 500)
         }
         .padding(.top, 4)
         .padding(.leading, 90)
@@ -136,6 +138,18 @@ extension HomePage {
                 self.delegate?.gamePicked(game)
 //                self.coordinator.gameSelected(game)
             }
+        }
+
+        func rowHeight(size: CGSize) -> CGFloat {
+            var h: CGFloat = 44
+            let fillHeight = floor(size.height / Double(games.count))
+            guard fillHeight > 0 else { return h }
+            if fillHeight > 54 {
+                h = 54
+            } else {
+                h = fillHeight
+            }
+            return h
         }
 
         func startGameSelectedAnimation(_ game: GameDescriptor, completion: @escaping () -> ()) {
