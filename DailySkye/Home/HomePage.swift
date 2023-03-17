@@ -72,16 +72,14 @@ struct HomePage: View {
 
     private func gridView() -> some View {
         GeometryReader { proxy in
-            Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
+            Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: viewModel.verticalSpacing) {
                 ForEach(viewModel.games, id: \.id) { game in
                     GamePickerRowView(game: game, viewModel: viewModel, height:viewModel.rowHeight(size: proxy.size))
-//                    GamePickerRowView(game: game, viewModel: viewModel, height: min(54, floor(proxy.size.height / Double(viewModel.games.count))) - 4)
                 }
-//                .environmentObject(coordinator)
             }
-            .frame(maxHeight: 500)
+            .padding(.horizontal, 2)
+            .frame(maxHeight: viewModel.maxGridHeight)
         }
-        .padding(.top, 4)
         .padding(.leading, 90)
     }
 
@@ -119,7 +117,9 @@ struct HomePage: View {
 
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        HomePage(viewModel: HomePageViewModel())
+        NavigationStack {
+            HomePage(viewModel: HomePageViewModel())
+        }
             .previewInterfaceOrientation(.landscapeRight)
     }
 }

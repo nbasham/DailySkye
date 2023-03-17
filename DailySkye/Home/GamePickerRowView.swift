@@ -12,6 +12,7 @@ struct GamePickerRowView: View {
             gameBall
             Spacer()
         }
+        .padding(.vertical, viewModel.verticalSpacing/2)
         .contentShape(Rectangle())
         .onTapGesture {
             viewModel.gameSelected(game)

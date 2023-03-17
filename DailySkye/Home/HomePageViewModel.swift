@@ -9,10 +9,14 @@ class HomePageViewModel: ObservableObject {
     @Published var animateBall: GameDescriptor?
     @Published var isRotating = false
     let bottomHeight: CGFloat = 72
+    let verticalSpacing: CGFloat = 4 // should be even
+    lazy var maxGridHeight = CGFloat(44 * games.count)
+    @Published var logoMargin: CGFloat = 0
 
     init(games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory], delegate: AppService? = nil) {
         self.games = games
         self.delegate = delegate
+        self.logoMargin = calcLogoMargin()
     }
 
     func gameSelected(_ game: GameDescriptor) {
@@ -20,6 +24,13 @@ class HomePageViewModel: ObservableObject {
             self.delegate?.gamePicked(game)
             //                self.coordinator.gameSelected(game)
         }
+    }
+
+    func calcLogoMargin() -> CGFloat {
+        if UIDevice.current.orientation == .portrait {
+            return 0
+        }
+        return 200
     }
 
     func rowHeight(size: CGSize) -> CGFloat {
@@ -75,4 +86,4 @@ class HomePageViewModel: ObservableObject {
     private func levelChanged() {
         delegate?.setLevel(level)
     }
-    }
+}
