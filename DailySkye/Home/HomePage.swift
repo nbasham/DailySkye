@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct HomePage: View {
-    @ObservedObject var viewModel: HomePage.ViewModel
+    @ObservedObject var viewModel: HomePageViewModel
     @State var showHelp: Bool = false
-    private let bottomHeight: CGFloat = 72
 
     var body: some View {
         VStack(spacing: 0) {
@@ -46,18 +45,18 @@ struct HomePage: View {
         ZStack(alignment: .leading) {
             Color("top").opacity(0.5)
                 .ignoresSafeArea()
-                .frame(height: bottomHeight)
+                .frame(height: viewModel.bottomHeight)
             HStack(spacing: 0) {
                 Circle()
                     .foregroundColor(Color("top"))
-                    .offset(x: -bottomHeight/2.0)
+                    .offset(x: -viewModel.bottomHeight/2.0)
                     .ignoresSafeArea()
-                    .frame(height: bottomHeight)
+                    .frame(height: viewModel.bottomHeight)
                 factioidView()
                     .frame(maxHeight: 66)
             }
             //  TODO Need a solution that leaves the trailing margin in tact
-            .offset(x: -bottomHeight/2.0)
+            .offset(x: -viewModel.bottomHeight/2.0)
         }
     }
 
@@ -118,87 +117,9 @@ struct HomePage: View {
     }
 }
 
-extension HomePage {
-    class ViewModel: ObservableObject {
-        let games: [GameDescriptor]
-        weak var delegate: AppService?
-        @Published var isSoundOn: Bool = true { didSet { soundOnChanged() } }
-        @Published var level: Int = 0 { didSet { levelChanged() } }
-        @Published var animateGame: GameDescriptor?
-        @Published var animateBall: GameDescriptor?
-        @Published var isRotating = false
-
-        init(games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory], delegate: AppService? = nil) {
-            self.games = games
-            self.delegate = delegate
-        }
-
-        func gameSelected(_ game: GameDescriptor) {
-            startGameSelectedAnimation(game) {
-                self.delegate?.gamePicked(game)
-//                self.coordinator.gameSelected(game)
-            }
-        }
-
-        func rowHeight(size: CGSize) -> CGFloat {
-            var h: CGFloat = 44
-            let fillHeight = floor(size.height / Double(games.count))
-            guard fillHeight > 0 else { return h }
-            if fillHeight > 54 {
-                h = 54
-            } else {
-                h = fillHeight
-            }
-            return h
-        }
-
-        func startGameSelectedAnimation(_ game: GameDescriptor, completion: @escaping () -> ()) {
-            let gameDuration = 0.2
-            let ballDuration = 1.05
-            let gameAnimation = Animation.spring(blendDuration: gameDuration)
-            withAnimation(gameAnimation) {
-                animateGame = game
-            }
-
-            let ballAnimation = Animation.easeIn(duration: ballDuration)
-            DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration) {
-                withAnimation(gameAnimation) {
-                    self.animateGame = nil
-                }
-                withAnimation(.linear(duration: ballDuration).repeatForever(autoreverses: false)) {
-                    self.isRotating = true
-                }
-                withAnimation(ballAnimation) {
-                    self.animateBall = game
-                }
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration + ballDuration - 0.2) {
-                completion()
-                //                self.navigationStack.append(game)
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration + ballDuration) {
-                withAnimation {
-                    self.animateBall = nil
-                    self.isRotating = false
-                }
-            }
-        }
-
-        private func soundOnChanged() {
-            delegate?.playSounds(isSoundOn)
-        }
-
-        private func levelChanged() {
-            delegate?.setLevel(level)
-        }
-    }
-}
-
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        HomePage(viewModel: HomePage.ViewModel())
+        HomePage(viewModel: HomePageViewModel())
             .previewInterfaceOrientation(.landscapeRight)
     }
 }

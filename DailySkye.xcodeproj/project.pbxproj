@@ -11,6 +11,7 @@
 		207E25C529C0090B00FCA8BF /* Coordinator+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25C429C0090B00FCA8BF /* Coordinator+App.swift */; };
 		207E25C729C00B8400FCA8BF /* Coordinator+Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25C629C00B8400FCA8BF /* Coordinator+Game.swift */; };
 		207E25C929C0561800FCA8BF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25C829C0561800FCA8BF /* Settings.swift */; };
+		207E25D129C3F91C00FCA8BF /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25D029C3F91C00FCA8BF /* HomePageViewModel.swift */; };
 		20AB318129B7EA17007A48C2 /* DailySkyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */; };
 		20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318229B7EA17007A48C2 /* ContentView.swift */; };
 		20AB318529B7EA18007A48C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AB318429B7EA18007A48C2 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		207E25C429C0090B00FCA8BF /* Coordinator+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+App.swift"; sourceTree = "<group>"; };
 		207E25C629C00B8400FCA8BF /* Coordinator+Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Game.swift"; sourceTree = "<group>"; };
 		207E25C829C0561800FCA8BF /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		207E25D029C3F91C00FCA8BF /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		209F4F0A29BB1B7800F50138 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		20AB317D29B7EA17007A48C2 /* DailySkye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailySkye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySkyeApp.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				20AB319029B7EB9B007A48C2 /* HomePage.swift */,
+				207E25D029C3F91C00FCA8BF /* HomePageViewModel.swift */,
 				20AB319829B92F57007A48C2 /* GamePickerRowView.swift */,
 			);
 			path = Home;
@@ -189,6 +192,7 @@
 				20AB319529B80FE2007A48C2 /* GamePage.swift in Sources */,
 				20AB319929B92F57007A48C2 /* GamePickerRowView.swift in Sources */,
 				20AB318F29B7EA30007A48C2 /* GameDescriptor.swift in Sources */,
+				207E25D129C3F91C00FCA8BF /* HomePageViewModel.swift in Sources */,
 				20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */,
 				20085B8529BB22EA00E5D573 /* GameSolvedView.swift in Sources */,
 				207E25C929C0561800FCA8BF /* Settings.swift in Sources */,
