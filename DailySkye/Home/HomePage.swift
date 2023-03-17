@@ -9,6 +9,10 @@ struct HomePage: View {
             middleView
             bottomView
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
+            // it is OK to update @Published vars here
+            viewModel.handleRotation(UIDevice.current.orientation)
+        }
         .navigationBarTitle("") // hides Back on game screen
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.visible, for: .navigationBar)
@@ -18,7 +22,7 @@ struct HomePage: View {
             ToolbarItem(placement: .navigationBarLeading) {
                 ZStack(alignment: .trailing) {
                     Color.clear
-                        .frame(width: 200)
+                        .frame(width: viewModel.logoMargin)
                     logoView
                 }
             }
@@ -35,10 +39,15 @@ struct HomePage: View {
                 .ignoresSafeArea()
             ZStack {
                 Color("background")
-                gridView()
-                    .zIndex(2)
+                VStack(spacing: 0) {
+                    Spacer(minLength: viewModel.pickerVMargin)
+                    gridView()
+                        .zIndex(2)
+                    Spacer(minLength: viewModel.pickerVMargin)
+                }
             }
         }
+
     }
 
     private var bottomView: some View {
@@ -53,7 +62,7 @@ struct HomePage: View {
                     .ignoresSafeArea()
                     .frame(height: viewModel.bottomHeight)
                 factioidView()
-                    .frame(maxHeight: 66)
+                    .frame(maxHeight: viewModel.bottomHeight - 8)
             }
             //  TODO Need a solution that leaves the trailing margin in tact
             .offset(x: -viewModel.bottomHeight/2.0)
@@ -80,14 +89,14 @@ struct HomePage: View {
             .padding(.horizontal, 2)
             .frame(maxHeight: viewModel.maxGridHeight)
         }
-        .padding(.leading, 90)
+        .padding(.leading, viewModel.pickerMargin)
     }
 
     private func factioidView() -> some View {
         let message: LocalizedStringKey = """
         Visit Apple: [click here](https://apple.com) This is **bold** text, this is *italic* text, and this is ***bold, italic*** text. ~~A strikethrough example~~ `Monospaced works too` 🙃 I recently befriended my neighbor and who is my dad’s age and in a wheelchair. He is so lonely because his wife died right around the time he lost his second leg.
         """
-        return Text(message).minimumScaleFactor(0.1).padding(.top, 8)
+        return Text(message).minimumScaleFactor(0.1).padding(.horizontal, 0).padding(.top, 8)
     }
 
     private func menuView() -> some View {

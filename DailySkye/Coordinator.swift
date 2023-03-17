@@ -7,7 +7,7 @@ class Coordinator: ObservableObject {
     internal var gameViewModel: GamePage.ViewModel?
 
     func start() -> some View {
-        let games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory]
+        let games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory, .test1, .test2]
         gamePickerViewModel = HomePageViewModel(games: games, delegate: self)
         return HomePage(viewModel: gamePickerViewModel).environmentObject(settings)
     }

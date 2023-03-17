@@ -22,21 +22,28 @@ struct GamePickerRowView: View {
     var gameName: some View {
         Text(game.displayName)
             .fontWeight(.medium)
+            .fixedSize() // prevents truncation
             .gridColumnAlignment(.trailing)
             .offset(x: viewModel.animateGame == game ? 30 : 0)
     }
 
     var gameBall: some View {
         Circle()
-            .fill(game.color)
+            .fill(
+//                AngularGradient(gradient: Gradient(colors: [game.color, game.color.opacity(0.8), game.color]), center: .center)
+                game.color
+            )
             .aspectRatio(1, contentMode: .fit)
 //            .frame(height: max(0, height))
             .overlay(
                 Text("play")
+                    .minimumScaleFactor(0.2)
+                    .lineLimit(1)
                     .fontWeight(.semibold)
                     .font(.system(size: 13, design: .rounded))
                     .foregroundColor(.white.opacity(0.8))
                     .offset(y: -1)
+                    .padding(3) // pushes 'play' from circle edge
             )
             .rotationEffect(.degrees(viewModel.animateBall == game && viewModel.isRotating ? 5*360 : 0))
             .offset(x: viewModel.animateBall == game ? UIScreen.main.bounds.width : 0)

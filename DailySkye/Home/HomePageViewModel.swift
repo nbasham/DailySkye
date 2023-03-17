@@ -8,15 +8,18 @@ class HomePageViewModel: ObservableObject {
     @Published var animateGame: GameDescriptor?
     @Published var animateBall: GameDescriptor?
     @Published var isRotating = false
-    let bottomHeight: CGFloat = 72
-    let verticalSpacing: CGFloat = 4 // should be even
+    @Published var bottomHeight: CGFloat = 72
+    @Published var verticalSpacing: CGFloat = 4 // should be even
     lazy var maxGridHeight = CGFloat(44 * games.count)
     @Published var logoMargin: CGFloat = 0
+    @Published var pickerMargin: CGFloat = 72
+    @Published var pickerVMargin: CGFloat = 4
+    var isPortrait: Bool { UIDevice.current.orientation == .portrait }
 
     init(games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory], delegate: AppService? = nil) {
         self.games = games
         self.delegate = delegate
-        self.logoMargin = calcLogoMargin()
+        handleRotation(UIDevice.current.orientation)
     }
 
     func gameSelected(_ game: GameDescriptor) {
@@ -26,11 +29,14 @@ class HomePageViewModel: ObservableObject {
         }
     }
 
-    func calcLogoMargin() -> CGFloat {
-        if UIDevice.current.orientation == .portrait {
-            return 0
-        }
-        return 200
+    func handleRotation(_ orientation: UIDeviceOrientation) {
+        //  for some reason an occasional .unknow is received
+        guard orientation != .unknown else { return }
+        logoMargin = orientation == .portrait ? 0 : 200
+        pickerMargin = orientation == .portrait ? 0 : logoMargin - 178
+        bottomHeight = orientation == .portrait ? 144 : 60
+        pickerVMargin = orientation == .portrait ? 8 : 2
+        verticalSpacing = orientation == .portrait ? 4 : 2
     }
 
     func rowHeight(size: CGSize) -> CGFloat {
