@@ -45,8 +45,8 @@ struct GamePickerRowView: View {
 struct GameListRowView_Previews: PreviewProvider {
     static var previews: some View {
         Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: 4) {
-            GamePickerRowView(game: .memory, viewModel: HomePage.ViewModel(), height: 44)
-            GamePickerRowView(game: .word_search, viewModel: HomePage.ViewModel(), height: 44)
+            GamePickerRowView(game: .memory, viewModel: HomePageViewModel(), height: 44)
+            GamePickerRowView(game: .word_search, viewModel: HomePageViewModel(), height: 44)
         }
         .padding(.leading, 100)
             .previewInterfaceOrientation(.landscapeRight)
