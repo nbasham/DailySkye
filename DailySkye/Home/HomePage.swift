@@ -81,14 +81,14 @@ struct HomePage: View {
 
     private func gridView() -> some View {
         GeometryReader { proxy in
-            Grid(alignment: .leading, horizontalSpacing: 18, verticalSpacing: viewModel.verticalSpacing) {
+            Grid(alignment: .leading, horizontalSpacing: viewModel.nameToBallSpace, verticalSpacing: viewModel.pickerBallVMargin) {
                 ForEach(viewModel.games, id: \.id) { game in
-                    GamePickerRowView(game: game, viewModel: viewModel, height:viewModel.rowHeight(size: proxy.size))
+                    HomeGamePickerRowView(game: game, viewModel: viewModel)
                 }
             }
             .padding(.horizontal, 2)
             .frame(maxHeight: viewModel.maxGridHeight)
-        }
+       }
         .padding(.leading, viewModel.pickerMargin)
     }
 

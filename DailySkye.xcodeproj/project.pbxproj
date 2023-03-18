@@ -21,7 +21,7 @@
 		20AB319329B80A62007A48C2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319229B80A62007A48C2 /* GameView.swift */; };
 		20AB319529B80FE2007A48C2 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319429B80FE2007A48C2 /* GamePage.swift */; };
 		20AB319729B8FA26007A48C2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319629B8FA26007A48C2 /* Coordinator.swift */; };
-		20AB319929B92F57007A48C2 /* GamePickerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319829B92F57007A48C2 /* GamePickerRowView.swift */; };
+		20AB319929B92F57007A48C2 /* HomeGamePickerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB319829B92F57007A48C2 /* HomeGamePickerRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		20AB319229B80A62007A48C2 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		20AB319429B80FE2007A48C2 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
 		20AB319629B8FA26007A48C2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		20AB319829B92F57007A48C2 /* GamePickerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePickerRowView.swift; sourceTree = "<group>"; };
+		20AB319829B92F57007A48C2 /* HomeGamePickerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGamePickerRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				20AB319029B7EB9B007A48C2 /* HomePage.swift */,
 				207E25D029C3F91C00FCA8BF /* HomePageViewModel.swift */,
-				20AB319829B92F57007A48C2 /* GamePickerRowView.swift */,
+				20AB319829B92F57007A48C2 /* HomeGamePickerRowView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 			files = (
 				207E25C529C0090B00FCA8BF /* Coordinator+App.swift in Sources */,
 				20AB319529B80FE2007A48C2 /* GamePage.swift in Sources */,
-				20AB319929B92F57007A48C2 /* GamePickerRowView.swift in Sources */,
+				20AB319929B92F57007A48C2 /* HomeGamePickerRowView.swift in Sources */,
 				20AB318F29B7EA30007A48C2 /* GameDescriptor.swift in Sources */,
 				207E25D129C3F91C00FCA8BF /* HomePageViewModel.swift in Sources */,
 				20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */,

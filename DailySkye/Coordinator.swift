@@ -5,11 +5,17 @@ class Coordinator: ObservableObject {
     @Published var navigationStack: [GameDescriptor] = []
     internal var gamePickerViewModel = HomePageViewModel()
     internal var gameViewModel: GamePage.ViewModel?
+    @Environment(\.safeAreaInsets) private var safeAreaInsets
 
-    func start() -> some View {
+    func start(_ proxy: GeometryProxy? = nil) -> some View {
+        //  for now keep these, using proxy here forces ContentView to redraw on rotation
+        print(proxy!.safeAreaInsets)
+        print(safeAreaInsets.wrappedValue)
         let games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory, .test1, .test2]
         gamePickerViewModel = HomePageViewModel(games: games, delegate: self)
-        return HomePage(viewModel: gamePickerViewModel).environmentObject(settings)
+        return HomePage(viewModel: gamePickerViewModel)
+            .environmentObject(settings)
+
     }
 
     func startGame(_ game: GameDescriptor) -> some View {

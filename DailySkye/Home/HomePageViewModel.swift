@@ -9,12 +9,15 @@ class HomePageViewModel: ObservableObject {
     @Published var animateBall: GameDescriptor?
     @Published var isRotating = false
     @Published var bottomHeight: CGFloat = 72
-    @Published var verticalSpacing: CGFloat = 4 // should be even
+    @Published var pickerBallVMargin: CGFloat = 4 // should be even
     lazy var maxGridHeight = CGFloat(44 * games.count)
     @Published var logoMargin: CGFloat = 0
     @Published var pickerMargin: CGFloat = 72
     @Published var pickerVMargin: CGFloat = 4
+    @Published var nameToBallSpace: CGFloat = 18
     var isPortrait: Bool { UIDevice.current.orientation == .portrait }
+//    @Published var safeAreaInsets: EdgeInsets = EdgeInsets()
+//    @Published var size: CGSize = .zero
 
     init(games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory], delegate: AppService? = nil) {
         self.games = games
@@ -32,23 +35,12 @@ class HomePageViewModel: ObservableObject {
     func handleRotation(_ orientation: UIDeviceOrientation) {
         //  for some reason an occasional .unknow is received
         guard orientation != .unknown else { return }
-        logoMargin = orientation == .portrait ? 0 : 200
-        pickerMargin = orientation == .portrait ? 0 : logoMargin - 178
+        logoMargin = orientation == .portrait ? 124 : 200
+        pickerMargin = orientation == .portrait ? 0 : logoMargin - 172
         bottomHeight = orientation == .portrait ? 144 : 60
         pickerVMargin = orientation == .portrait ? 8 : 2
-        verticalSpacing = orientation == .portrait ? 4 : 2
-    }
-
-    func rowHeight(size: CGSize) -> CGFloat {
-        var h: CGFloat = 44
-        let fillHeight = floor(size.height / Double(games.count))
-        guard fillHeight > 0 else { return h }
-        if fillHeight > 54 {
-            h = 54
-        } else {
-            h = fillHeight
-        }
-        return h
+        pickerBallVMargin = orientation == .portrait ? 4 : 2
+        nameToBallSpace = orientation == .portrait ? 12 : 18
     }
 
     func startGameSelectedAnimation(_ game: GameDescriptor, completion: @escaping () -> ()) {
