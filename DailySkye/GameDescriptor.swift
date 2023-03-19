@@ -52,4 +52,16 @@ enum GameDescriptor: String, Identifiable {
         } // next color ff00ff
     }
 
+    var canSharePuzzle: Bool {
+        switch self {
+            case .cryptogram:
+                return true
+            case .quotefalls:
+                return true
+            case .sample_game:
+                return true
+            default:
+                return false
+        }
+    }
 }

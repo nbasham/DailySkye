@@ -22,12 +22,20 @@ struct GameServices {
 extension Coordinator: GameService {
 
     func back() {
+        if !gameViewModel.isSolved {
+            GameStateStorage.saveState(game: gameViewModel.game, puzzleId: gameViewModel.puzzle.id, seconds: gameServices.timer.seconds)
+        }
         navigationStack.remove(at: 0)
     }
 
     func startGame() {
         gameServices.timer.start{ time in
             self.gameViewModel?.time = time.timerValue
+        }
+        let state = GameStateStorage.loadState(game: gameViewModel.game)
+        if let state = state {
+            gameServices.timer.seconds = state.seconds
+            gameViewModel.time = state.seconds.timerValue
         }
     }
 
@@ -47,6 +55,7 @@ extension Coordinator: GameService {
 
     func solved() {
         gameServices.timer.pause()
+        GameStateStorage.deleteAllState(for: gameViewModel.game)
         withAnimation {
             gameViewModel?.showSolved.toggle()
         }

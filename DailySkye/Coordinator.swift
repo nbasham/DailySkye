@@ -4,7 +4,7 @@ class Coordinator: ObservableObject {
     let settings: Settings = Settings()
     @Published var navigationStack: [GameDescriptor] = []
     internal var gamePickerViewModel = HomePageViewModel()
-    internal var gameViewModel: GamePageViewModel?
+    internal var gameViewModel: GamePageViewModel!
     internal let gameServices = GameServices()
     @Environment(\.safeAreaInsets) private var safeAreaInsets
 

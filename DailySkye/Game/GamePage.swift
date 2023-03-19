@@ -57,7 +57,11 @@ struct GamePage: View {
                 }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                menuView()
+                if viewModel.showShareMenu {
+                    shareMenuView()
+                } else {
+                    menuView()
+                }
             }
         }
    }
@@ -78,6 +82,17 @@ struct GamePage: View {
         }
     }
 
+    private func shareMenuView() -> some View {
+        Button(action: { viewModel.showShare = true }, label: {
+            HStack {
+                Text("share")
+                    .foregroundColor(.white)
+                    .fontWeight(.light)
+                Image(systemName: "square.and.arrow.up.fill")
+                    .imageScale(.large)
+            }
+        })
+    }
 }
 
 struct GamePage_Previews: PreviewProvider {
@@ -86,23 +101,5 @@ struct GamePage_Previews: PreviewProvider {
             GamePage(viewModel: GamePageViewModel(game: .cryptogram))
         }
         .previewInterfaceOrientation(.landscapeRight)
-    }
-}
-
-struct SudokuView: View {
-    @ObservedObject var viewModel: GamePageViewModel
-    @EnvironmentObject var settings: Settings
-
-    var body: some View {
-        VStack {
-            Text("sound on \(settings.soundOn ? "true" : "false")")
-            Button(action: {
-                withAnimation {
-                    viewModel.solved()
-                }
-            }, label: {
-                Text("Solve it")
-            })
-        }
     }
 }

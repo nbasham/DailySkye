@@ -5,6 +5,8 @@ class GamePageViewModel: ObservableObject {
     weak var delegate: GameService?
     @Published var isSolved = false
     @Published var showSolved = false
+    @Published var showShareMenu = false
+    @Published var showShare = false
     @Published var time: String = 0.timerValue
 
     init(game: GameDescriptor, delegate: GameService? = nil) {
@@ -14,6 +16,7 @@ class GamePageViewModel: ObservableObject {
 
     func startGame() {
         isSolved = false
+        showShareMenu = false
         delegate?.startGame()
     }
 
@@ -27,7 +30,12 @@ class GamePageViewModel: ObservableObject {
     }
 
     func solved() {
-        isSolved = true
+        withAnimation {
+            isSolved = true
+        }
+        if game.canSharePuzzle {
+            showShareMenu = true
+        }
         delegate?.solved()
     }
 
