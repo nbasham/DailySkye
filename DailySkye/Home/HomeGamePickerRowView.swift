@@ -3,7 +3,6 @@ import SwiftUI
 struct HomeGamePickerRowView: View {
     let game: GameDescriptor
     @ObservedObject var viewModel: HomePageViewModel
-//    var height: CGFloat = 44
     @State private var isRotating = 0.0
 
     var body: some View {

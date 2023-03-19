@@ -2,9 +2,9 @@ import SwiftUI
 
 enum GameDescriptor: String, Identifiable {
 
-    case cryptogram, crypto_families, quotefalls, sudoku, word_search, memory, test1, test2
+    case cryptogram, crypto_families, quotefalls, sudoku, word_search, memory, triplets, sample_game
 
-    static let all: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory, .test1, .test2]
+    static let all: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory, .triplets, .sample_game]
 
     var displayName: String {
         var name: String
@@ -21,10 +21,10 @@ enum GameDescriptor: String, Identifiable {
                 name = "Word Search"
             case .memory:
                 name = "Memory"
-            case .test1:
-                name = "Test 1"
-            case .test2:
-                name = "Test 2"
+            case .triplets:
+                name = "Triplets"
+            case .sample_game:
+                name = "Sample Game"
         }
         return name
     }
@@ -45,9 +45,9 @@ enum GameDescriptor: String, Identifiable {
                 return .pink
             case .memory:
                 return .purple
-            case .test1:
+            case .triplets:
                 return .orange
-            case .test2:
+            case .sample_game:
                 return .cyan
         } // next color ff00ff
     }

@@ -117,9 +117,13 @@ struct HomePage: View {
             }
         }
         label: {
-            //  clipboard.fill
-            Label("Menu", systemImage: "info.circle.fill")
-                .imageScale(.large)
+            HStack {
+                Text("menu")
+                    .foregroundColor(.white)
+                    .fontWeight(.light)
+                Label("menu", systemImage: "info.circle.fill")
+                    .imageScale(.large)
+            }
         }
     }
 }

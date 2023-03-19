@@ -10,14 +10,12 @@ class HomePageViewModel: ObservableObject {
     @Published var isRotating = false
     @Published var bottomHeight: CGFloat = 72
     @Published var pickerBallVMargin: CGFloat = 4 // should be even
-    lazy var maxGridHeight = CGFloat(44 * games.count)
     @Published var logoMargin: CGFloat = 0
     @Published var pickerMargin: CGFloat = 72
     @Published var pickerVMargin: CGFloat = 4
     @Published var nameToBallSpace: CGFloat = 18
     var isPortrait: Bool { UIDevice.current.orientation == .portrait }
-//    @Published var safeAreaInsets: EdgeInsets = EdgeInsets()
-//    @Published var size: CGSize = .zero
+    lazy var maxGridHeight = CGFloat(44 * games.count)
 
     init(games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory], delegate: AppService? = nil) {
         self.games = games
@@ -28,7 +26,6 @@ class HomePageViewModel: ObservableObject {
     func gameSelected(_ game: GameDescriptor) {
         startGameSelectedAnimation(game) {
             self.delegate?.gamePicked(game)
-            //                self.coordinator.gameSelected(game)
         }
     }
 
@@ -43,6 +40,17 @@ class HomePageViewModel: ObservableObject {
         nameToBallSpace = orientation == .portrait ? 12 : 18
     }
 
+    private func soundOnChanged() {
+        delegate?.playSounds(isSoundOn)
+    }
+
+    private func levelChanged() {
+        delegate?.setLevel(level)
+    }
+}
+
+//  Animation
+extension HomePageViewModel {
     func startGameSelectedAnimation(_ game: GameDescriptor, completion: @escaping () -> ()) {
         let gameDuration = 0.2
         let ballDuration = 1.05
@@ -66,7 +74,6 @@ class HomePageViewModel: ObservableObject {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration + ballDuration - 0.2) {
             completion()
-            //                self.navigationStack.append(game)
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + gameDuration + ballDuration) {
@@ -75,13 +82,5 @@ class HomePageViewModel: ObservableObject {
                 self.isRotating = false
             }
         }
-    }
-
-    private func soundOnChanged() {
-        delegate?.playSounds(isSoundOn)
-    }
-
-    private func levelChanged() {
-        delegate?.setLevel(level)
     }
 }

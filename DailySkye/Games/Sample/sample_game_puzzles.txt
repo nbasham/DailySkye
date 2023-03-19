@@ -1,0 +1,366 @@
+0101	Arab Proverb	Friends should live together like brothers, but do business like strangers.
+0102	Michelangelo	If people knew how hard I had to work to gain my mastery, it wouldn't seem so wonderful at all.
+0103	Margaret Millar	Some people become so expert at reading between the lines they don't read the lines.
+0104	Elbert Hubbard	I would rather be able to appreciate things I can not have than to have things I am not able to appreciate.
+0105	Duc de La Rochefoucauld	We would often be ashamed of our finest actions if the world understood all the motives which produced them.
+0106	Peter Drucker	There is nothing so useless as doing efficiently that which should not be done at all.
+0107	Abraham Lincoln	As I would not be a slave, so I would not be a master. This expresses my idea of democracy.
+0108	Alice Childress	Life is just a short walk from the cradle to the grave and it sure behooves us to be kind to one another along the way.
+0109	Henry Ford	Whether you think that you can, or that you can't, you are usually right.
+0110	Frank Lloyd Wright	Many wealthy people are little more than janitors of their possessions.
+0111	Will Rogers	The difference between death and taxes is death doesn't get worse every time Congress meets.
+0112	Igor Stravinsky	Silence will save me from being wrong and foolish, but it will also deprive me of the possibility of being right.
+0113	Baltasar Gracian	It is better to sleep on things beforehand than lie awake about them afterwards.
+0114	Will Rogers	This country has come to feel the same when Congress is in session as when the baby gets hold of a hammer.
+0115	Warren Beatty	You've achieved success in your field when you don't know whether what you're doing is work or play.
+0116	Plutarch	The mind is not a vessel that needs filling, but wood that needs igniting.
+0117	Dwight Eisenhower	In preparing for battle I have always found that plans are useless, but planning is indispensable.
+0118	H.L. Mencken	Men become civilized, not in proportion to their willingness to believe, but in proportion to their readiness to doubt.
+0119	Harriet Beecher Stowe	The bitterest tears shed over graves are for words left unsaid and deeds left undone.
+0120	Stanislaw J. Lec	We are all equal before the law, but not before those appointed to apply it.
+0121	James Russell Lowell	Books are the bees which carry the quickening pollen from one to another mind.
+0122	George Orwell	If liberty means anything at all, it means the right to tell people what they do not want to hear.
+0123	Swedish Proverb	Don't throw away the old bucket until you know whether the new one holds water.
+0124	Seneca	Anger, if not restrained, is frequently more hurtful to us than the injury that provokes it.
+0125	Margaret Mead	One of the oldest human needs is having someone to wonder where you are when you don't come home at night.
+0126	Lord Macaulay	The highest proof of virtue is to possess boundless power without abusing it.
+0127	G.K. Chesterton	There is a road from the eye to the heart that does not go through the intellect.
+0128	Michel de Montaigne	My life has been full of terrible misfortunes most of which never happened.
+0129	Francois	We are so accustomed to disguise ourselves to others that in the end we become disguised to ourselves.
+0130	Charles Robert Darwin	A man who dares to waste one hour of time has not discovered the value of life.
+0131	Baltasar Gracian	Those who insist on the dignity of their office show they have not deserved it.
+0201	Leo Tolstoy	There is no greatness where there is not simplicity, goodness, and truth.
+0202	Madame Anne Sophie Swetchine	In youth we feel richer for every new illusion; in maturer years, for every one we lose.
+0203	Alice Walker	Thank you is the best prayer that anyone could say. I say that one a lot.
+0204	Henry David Thoreau	There is no rule more invariable than that we are paid for our suspicions by finding what we suspect.
+0205	Mark Twain	A thing long expected takes the form of the unexpected when at last it comes.
+0206	Martin Luther King	Our lives begin to end the day we become silent about things that matter.
+0207	Jane Welsh Carlyle	When one has been threatened with a great injustice, one accepts a smaller as a favour.
+0208	Cullen Hightower	Laughing at our mistakes can lengthen our own life. Laughing at someone else's can shorten it.
+0209	Marcus Aurelius	You will find relief from vain fancies if you do every act in life as though it were your last.
+0210	Aristotle	I count him braver who overcomes his desires than him who conquers his enemies, for the hardest victory is over self.
+0211	Amelia Earhart	The most difficult thing is the decision to act, the rest is merely tenacity.
+0212	Cato the Elder	After I'm dead I'd rather have people ask why I have no monument than why I have one.
+0213	Francois	Some people with great virtues are disagreeable, while others with great vices are delightful.
+0214	Georg Christoph Lichtenberg	It is almost impossible to carry the torch of truth through a crowd without singeing somebody's beard.
+0215	Rosalynn Carter	You have to have confidence in your ability, and then be tough enough to follow through.
+0216	Jalaluddin Rumi	Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it.
+0217	Isaac Babel	No iron spike can pierce a human heart as icily as a period in the right place.
+0218	Amar Gopal Bose	No one ever ever won a chess game by betting on each move. Sometimes you have to move backward to get a step forward.
+0219	Dolly Parton	I'm not offended by all the dumb blonde jokes because I know I'm not dumb and I also know that I'm not blonde.
+0220	Thomas Pynchon	If they can get you asking the wrong questions, they don't have to worry about the answers.
+0221	Malcolm Forbes	Too many people undervalue what they are and overvalue what they are not.
+0222	Wendell Johnson	Always and never are two words you should always remember never to use.
+0223	Theodore Roosevelt	It is an outrage to discriminate against any such man because of creed, or birthplace, or origin.
+0224	Charles Darwin	It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.
+0225	J. K. Rowling	We've all got both light and dark inside us. What matters is the part we choose to act on. That's who we really are.
+0226	Konrad Adenauer	We all live under the same sky, but we don't all have the same horizon.
+0227	David Lloyd George	Don't be afraid to take a big step. You can't cross a chasm in two small jumps.
+0228	Henry van Dyke	Use the talents you possess, for the woods would be a very silent place if no birds sang except the best.
+0229	Bob Monkhouse	They laughed when I said I was going to be a comedian. They're not laughing now.
+0301	Arthur Miller	Don't be seduced into thinking that that which does not make a profit is without value.
+0302	George Washington	Labor to keep alive in your breast that little spark of celestial fire called conscience.
+0303	Charles Kettering	An inventor is simply a fellow who doesn't take his education too seriously.
+0304	Adam Smith	What can be added to the happiness of a man who is in health, out of debt, and has a clear conscience?
+0305	Maya Angelou	Without courage we cannot practice any other virtue with consistency. We can't be kind, true, merciful, generous, or honest.
+0306	Harper Lee	The one thing that doesn't abide by majority rule is a person's conscience.
+0307	Soren Kierkegaard	Most men pursue pleasure with such breathless haste they hurry past it.
+0308	Oscar Levant	I once said cynically of a politician, he'll double cross that bridge when he comes to it.
+0309	Abraham Lincoln	The Lord prefers common-looking people. That is the reason He makes so many of them.
+0310	Robert Graves	There's no money in poetry, but then there's no poetry in money, either.
+0311	Robert Frost	In three words I can sum up everything I've learned about life: it goes on.
+0312	John Andrew Holmes	Speech is conveniently located midway between thought and action, where it often substitutes for both.
+0313	Jonathan Zittrain	If what you are getting online is for free, you are not the customer, you are the product.
+0314	Oscar Wilde	Men always want to be a woman's first love - women like to be a man's last romance.
+0315	Charles Dickens	No one is useless in this world who lightens the burden of it for anyone else.
+0316	Frank A. Clark	A child, like your stomach, doesn't need all you can afford to give it.
+0317	Order of the Phoenix	Indifference and neglect often do much more damage than outright dislike.
+0318	Grace Moore	I think that to get under the surface and really appreciate the beauty of a country, one has to go there poor.
+0319	Warren Buffett	After all, you only find out who is swimming naked when the tide goes out.
+0320	John F. Kennedy	If we make peaceful revolution impossible, we make violent revolution inevitable.
+0321	Estée Lauder	I didn't get there by wishing for it or hoping for it, but by working for it.
+0322	Peter Ustinov	Since we are destined to live out our lives in the prison of our minds, our one duty is to furnish it well.
+0323	Francis Bacon	There is no excellent beauty that hath not some strangeness in the proportion.
+0324	Pablo Picasso	Ah, good taste, what a dreadful thing! Taste is the enemy of creativeness.
+0325	Bill Gates	Most people overestimate what they can do in one year and underestimate what they can do in ten years.
+0326	John W. Foster	One of the strongest characteristics of genius is the power of lighting its own fire.
+0327	Margaret Mitchell	Until you've lost your reputation, you never realize what a burden it was or what freedom really is.
+0328	Will Rogers	I would rather be the man who bought the Brooklyn Bridge than the one who sold it.
+0329	Jean de la Bruyere	Life is a tragedy for those who feel, and a comedy for those who think.
+0330	Michelle Obama	Success isn't about how much money you make. It's about the difference you make in people's lives.
+0331	Max Beerbohm	Only mediocrity can be trusted to be always at its best. Genius must always have lapses proportionate to its triumphs.
+0401	Aristotle	It is the mark of an educated mind to be able to entertain a thought without accepting it.
+0402	Moliere	It is not what we do, but also what we do not do, for which we are accountable.
+0403	Oliver Wendell Holmes	Many ideas grow better when transplanted into another mind than in the one where they sprang up.
+0404	Gary Zukav	The first man to see an illusion by which men have flourished for centuries surely stands in a lonely place.
+0405	Henri Frederic Amiel	Truth is not only violated by falsehood, it may be equally outraged by silence.
+0406	Lao-Tzu	When the effective leader is finished with his work, the people say it happened naturally.
+0407	Lily Tomlin	The trouble with the rat race is that even if you win, you're still a rat.
+0408	Jascha Heifetz	No matter what side of the argument you are on, you always find people on your side that you wish were on the other.
+0409	John Steinbeck	Ideas are like rabbits. You get a couple and learn how to handle them, and pretty soon you have a dozen.
+0410	Josh Billings	Don't mistake pleasure for happiness. They're a different breed of dog.
+0411	James Earl Jones	One of the hardest things in life is having words in your heart that you can't utter.
+0412	Arthur Schopenhauer	The first forty years of life give us the text, the next thirty supply the commentary on it.
+0413	Will Rogers	Even if you're on the right track, you'll get run over if you just sit there.
+0414	Thomas Huxley	Try to learn something about everything and everything about something.
+0415	Joan Rivers	People say that money is not the key to happiness, but I always figured if you have enough money, you can have a key made.
+0416	Rumi	The satiated man and the hungry one do not see the same thing when they look upon a loaf of bread.
+0417	Will Rogers	The quickest way to double your money is to fold it in half and put it back in your pocket.
+0418	Heraclitus	No man ever steps in the same river twice, for it's not the same river and he's not the same man.
+0419	Giovanni Ruffini	The teacher is like the candle which lights others in consuming itself.
+0420	Doug Larson	Few things are more satisfying than seeing your children have teenagers of their own.
+0421	Will Rogers	There's no trick to being a humorist when you have the whole government working for you.
+0422	William Shakespeare	A man has generally the good or ill qualities which he attributes to mankind.
+0423	Mignon McLaughlin	True remorse is never just a regret over consequences; it is a regret over motive.
+0424	J. K. Rowling	It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.
+0425	Theodore Rubin	Kindness is more important than wisdom, and the recognition of this is the beginning of wisdom.
+0426	Cyril Connolly	Better to write for yourself and have no public, than to write for the public and have no self.
+0427	Irvin S. Cobb	If writers were good businessmen, they'd have too much sense to be writers.
+0428	Lin Yutang	When small men begin to cast big shadows, it means that the sun is about to set.
+0429	Harriet Lerner	Although the connections are not always obvious, personal change is inseparable from social and political change.
+0430	Robert Louis Stevenson	Don't judge each day by the harvest you reap, but by the seeds you plant.
+0501	Anonymous	I am convinced that every time a sock goes missing from the dryer, it comes back as an extra Tupperware lid.
+0502	Upton Sinclair	It is difficult to get a man to understand something when his salary depends upon his not understanding it.
+0503	Arthur Koestler	Language can become a screen which stands between the thinker and reality. This is the reason why true creativity often starts where language ends.
+0504	Isaac Bashevis Singer	Every creator painfully experiences the chasm between his inner vision and its ultimate expression.
+0505	Andre Gide	It is better to fail at your own life than to succeed at someone else's.
+0506	Maya Angelou	Music was my refuge. I could crawl into the spaces between the notes and curl my back to loneliness.
+0507	Stella	The whole point of getting things done is knowing what to leave undone.
+0508	Gary Hector	Profits, like sausages and laws, are esteemed most by those who know least about what goes into them.
+0509	Steven Wright	I have a decaffeinated coffee table. You'd never know it to look at it.
+0510	Niccolo Machiavelli	The first method for estimating the intelligence of a ruler is to look at the men he has around him.
+0511	Tim Cook	Life is fragile. We're not guaranteed a tomorrow so give it everything you've got.
+0512	Fannie Hurst	Some people think they are worth a lot of money just because they have it.
+0513	Moses Hadas	Thank you for sending me a copy of your book - I'll waste no time in reading it.
+0514	Seneca	If one does not know to which port one is sailing, no wind is favorable.
+0515	Sydney Smith	It is the greatest of all mistakes to do nothing because you can only do a little.
+0516	Aldous Huxley	The propagandist's purpose is to make one set of people forget that certain other sets of people are human.
+0517	Bill Vaughan	We learn something every day, and lots of times it's that what we learned the day before was wrong.
+0518	Francois de La Rochefoucauld	We confess our little faults to persuade people that we have no large ones.
+0519	Nicolas Caussin	It often happens that those of whom we speak least on earth are best known in heaven.
+0520	Anne Frank	How wonderful it is that nobody need wait a single moment before starting to improve the world.
+0521	Albert Einstein	The world is in greater peril from those who tolerate or encourage evil than from those who actually commit it.
+0522	Christopher Morley	The courage of the poet is to keep ajar the door that leads into madness.
+0523	Nelson Mandela	There is nothing like returning to a place that remains unchanged to find the ways in which you yourself have altered.
+0524	Anonymous	Good friends are hard to find, harder to leave, and impossible to forget.
+0525	George Santayana	To delight in war is a merit in the soldier, a dangerous quality in the captain, and a positive crime in the statesman.
+0526	Fred Thompson	After two years in Washington, I often long for the realism and sincerity of Hollywood.
+0527	Angelina Jolie	If you don't get out of the box you've been raised in, you won't understand how much bigger the world is.
+0528	Beverly Sills	You may be disappointed if you fail, but you are doomed if you don't try.
+0529	James Baldwin	I imagine one of the reasons people cling to their hates so stubbornly is because they sense, once hate is gone, they will be forced to deal with pain.
+0530	Benjamin Franklin	Justice will not be served until those who are unaffected are as outraged as those who are.
+0531	Bill Vaughan	A real patriot is the fellow who gets a parking ticket and rejoices that the system works.
+0601	Pablo Picasso	A painter is a man who paints what he sells; an artist, on the other hand, is a man who sells what he paints.
+0602	Mark Twain	It is curious that physical courage should be so common in the world and moral courage so rare.
+0603	Rabindranath Tagore	Death is not extinguishing the light; it is putting out the lamp because the dawn has come.
+0604	Thomas Jefferson	When governments fear the people there is liberty. When the people fear the government there is tyranny.
+0605	Robert Green Ingersoll	In the presence of eternity, the mountains are as transient as the clouds.
+0606	Friedrich Wilhelm Nietzsche	And those who were seen dancing were thought to be insane by those who could not hear the music.
+0607	John Jay Chapman	The world of politics is always twenty years behind the world of thought.
+0608	Dame Edna Everage	Never be afraid to laugh at yourself, after all, you could be missing out on the joke of the century.
+0609	George Gordon Byron	Letter writing is the only device for combining solitude with good company.
+0610	Madame de Stael	We understand death for the first time when he puts his hand upon one whom we love.
+0611	Giorgos Seferis	Don't ask me who's influenced me. A lion is made up of the lambs he's digested, and I've been reading all my life.
+0612	Christopher Hampton	Asking a working writer what he thinks about critics is like asking a lamppost how it feels about dogs.
+0613	Thomas Szasz	Boredom is the feeling that everything is a waste of time; serenity, that nothing is.
+0614	Henri Poincaré	To doubt everything or to believe everything are two equally convenient solutions; both dispense with the necessity of reflection.
+0615	Jerry Seinfeld	A bookstore is one of the only pieces of evidence we have that people are still thinking.
+0616	Robert Kiyosaki	Don't let the fear of losing be greater than the excitement of winning.
+0617	Roy Amara	We tend to overestimate the effect of a technology in the short run and underestimate the effect in the long run.
+0618	Banksy	I need someone to protect me from all the measures they take in order to protect me.
+0619	Marya Mannes	The more people are reached by mass communication, the less they communicate with each other.
+0620	Harper Lee	You never really understand a person until you consider things from his point of view.
+0621	John Updike	The artist brings something into the world that didn't exist before, and he does it without destroying something else.
+0622	Heraclitus	Man is most nearly himself when he achieves the seriousness of a child at play.
+0623	John Henry Jowett	The real measure of our wealth is how much we'd be worth if we lost all our money.
+0624	Noam Chomsky	If we don't believe in freedom of expression for people we despise, we don't believe in it at all.
+0625	Eric Hoffer	You can discover what your enemy fears most by observing the means he uses to frighten you.
+0626	Abraham Lincoln	When I do good, I feel good; when I do bad, I feel bad. That's my religion.
+0627	Mark Twain	Let us so live that when we come to die even the undertaker will be sorry.
+0628	Louis L'Amour	Too often I would hear men boast of the miles covered that day, rarely of what they had seen.
+0629	Robert M. Pirsig	To live for some future goal is shallow. It's the sides of the mountain that sustain life, not the top.
+0630	William Arthur Ward	Feeling gratitude and not expressing it is like wrapping a present and not giving it.
+0701	Adlai Stevenson	In America, anybody can be president. That's one of the risks you take.
+0702	Niels Bohr	An expert is a man who has made all the mistakes which can be made in a very narrow field.
+0703	Ernest Hemingway	I know only that what is moral is what you feel good after and what is immoral is what you feel bad after.
+0704	Ralph Waldo Emerson	To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.
+0705	John Singleton Mosby	War loses a great deal of romance after a soldier has seen his first battle.
+0706	James Thurber	There are two kinds of light - the glow that illuminates, and the glare that obscures.
+0707	Theodore Roosevelt	I think there is only one quality worse than hardness of heart, and that is softness of head.
+0708	Steve Furtick	The reason we struggle with insecurity is because we compare our behind the scenes with everyone else's highlight reel.
+0709	Thomas Jefferson	I'm a great believer in luck and I find the harder I work, the more I have of it.
+0710	Elie Wiesel	Ultimately, the only power to which man should aspire is that which he exercises over himself.
+0711	Ivan Turgenev	However much you knock at nature's door, she will never answer you in comprehensible words.
+0712	Marie Louise de la Ramee	Familiarity is a magician that is cruel to beauty but kind to ugliness.
+0713	Leymah Gbowee	You can never leave footprints that last if you are always walking on tiptoe.
+0714	Cale Yarborough	Don't ever wrestle with a pig. You'll both get dirty, but the pig will enjoy it.
+0715	Martha Beck	No matter how difficult and painful it may be, nothing sounds as good to the soul as the truth.
+0716	Blaise Pascal	We are usually convinced more easily by reasons we have found ourselves than by those which have occurred to others.
+0717	John Greenleaf Whittier	For all sad words of tongue and pen, the saddest are these, "It might have been."
+0718	Lajos Kassak	The father of every good work is discontent, and its mother is diligence.
+0719	E. M. Forster	We must be willing to let go of the life we have planned, so as to have the life that is waiting for us.
+0720	Ludwig Wittgenstein	Everyday language is a part of the human organism and is no less complicated than it.
+0721	Carlos Castaneda	We either make ourselves happy or miserable. The amount of work is the same.
+0722	Marcel Proust	The real voyage of discovery consists not in seeking new lands but seeing with new eyes.
+0723	Gustave Flaubert	What a heavy oar the pen is, and what a strong current ideas are to row in!
+0724	Frank A Clark	If you can find a path with no obstacles, it probably doesn't lead anywhere.
+0725	Rhonda Hansome	A man's got to do what a man's got to do. A woman must do what he can't.
+0726	François de La Rochefoucauld	True love is like ghosts, which everybody talks about and few have seen.
+0727	Anon	If the lessons of history teach us anything it is that nobody learns the lessons that history teaches us.
+0728	Jean Paul Richter	For sleep, riches, and health to be truly enjoyed, they must be interrupted.
+0729	J.D. Salinger	I am a kind of paranoiac in reverse. I suspect people of plotting to make me happy.
+0730	Anne Lamott	Almost everything will work again if you unplug it for a few minutes, including you.
+0731	Eleanor Roosevelt	Beautiful young people are accidents of nature, but beautiful old people are works of art.
+0801	James Freeman Clarke	A politician is a man who thinks of the next election; while the statesman thinks of the next generation.
+0802	Andre Berthiaume	We all wear masks, and the time comes when we cannot remove them without removing some of our own skin.
+0803	Abraham Lincoln	I have always found that mercy bears richer fruits than strict justice.
+0804	Maurice Barres	The politician is an acrobat. He keeps his balance by saying the opposite of what he does.
+0805	Johann Wolfgang von Goethe	Too many parents make life hard for their children by trying, too zealously, to make it easy for them.
+0806	T.S. Eliot	To do the useful thing, to say the courageous thing, to contemplate the beautiful thing: that is enough for one man's life.
+0807	Miguel de Unamuno	We should try to be the parents of our future rather than the offspring of our past.
+0808	Aristotle	The high-minded man must care more for the truth than for what people think.
+0809	Emma Watson	It's not the absence of fear, it's overcoming it. Sometimes you've got to blast through and have faith.
+0810	Jean-Luc Godard	A story should have a beginning, a middle, and an end, but not necessarily in that order.
+0811	Saul Bellow	Everybody needs his memories. They keep the wolf of insignificance from the door.
+0812	Ralph Marston	Truly appreciate those around you, and you'll soon find many others around you.
+0813	Men In Black	You know what the difference is between you and me? I make this look good!
+0814	Plato	You can discover more about a person in an hour of play than in a year of discussion.
+0815	Bob Dylan	I think of a hero as someone who understands the degree of responsibility that comes with his freedom.
+0816	Arianna Huffington	I do not try to dance better than anyone else. I only try to dance better than myself.
+0817	Fritz Scholder	I give thanks everyday that I've been able to take my craziness and make it work for me.
+0818	Jules Renard	As I grow to understand life less and less, I learn to live it more and more.
+0819	Thomas Jefferson	We in America do not have government by the majority. We have government by the majority who participate.
+0820	Marcel Proust	The only real voyage of discovery consists not in seeking new landscapes but in having new eyes.
+0821	Francois de La Rochefoucauld	How can we expect another to keep our secret if we have been unable to keep it ourselves.
+0822	Anonymous	Dance like nobody is watching, because they are not, they are all checking their phones.
+0823	Esther Warner Dendel	It takes a certain maturity of mind to accept that nature works as steadily in rust as in rose petals.
+0824	Henry Adams	A teacher affects eternity, he can never tell where his influence stops.
+0825	Abraham Lincoln	It will not do to investigate the subject of religion too closely, as it is apt to lead to infidelity.
+0826	Kahlil Gibran	Poetry is a deal of joy and pain and wonder, with a dash of the dictionary.
+0827	James Madison	If Tyranny and Oppression come to this land, it will be in the guise of fighting a foreign enemy.
+0828	John F. Kennedy	Too often we enjoy the comfort of opinion without the discomfort of thought.
+0829	Henry David Thoreau	We are all sculptors and painters, and our material is our own flesh and bones.
+0830	Jeff Bezos	If you absolutely can't tolerate critics, then don't do anything new or interesting.
+0831	Friedrich Wilhelm Nietzsche	We are so fond of being out among nature, because it has no opinions about us.
+0901	Henry David Thoreau	There are a thousand hacking at the branches of evil to one who is striking at the root.
+0902	Raoul Vaneigem	There are more truths in twenty-four hours of a man's life than in all the philosophies.
+0903	Unknown	The richest man is not he who has the most, but he who needs the least.
+0904	Margaret Mead	At times it may be necessary to temporarily accept a lesser evil, but one must never label a necessary evil as good.
+0905	Arthur Helps	Wise sayings often fall on barren ground, but a kind word is never thrown away.
+0906	Cullen Hightower	A true measure of your worth includes all the benefits others have gained from your successes.
+0907	Thomas Jefferson	I hope our wisdom will grow with our power, and teach us that the less we use our power the greater it will be.
+0908	Jackie Mason	I have enough money to last me the rest of my life, unless I buy something.
+0909	Leonardo da Vinci	The time will come when men such as I will look upon the murder of animals as they now look on the murder of men.
+0910	Albert Einstein	The pursuit of truth and beauty is a sphere of activity in which we are permitted to remain children all our lives.
+0911	Dalai Lama	If you think you are too small to make a difference, try sleeping with a mosquito.
+0912	Isaac Newton	If I have seen farther than others, it is because I have stood on the shoulders of giants.
+0913	G.K. Chesterton	The function of the imagination is not to make strange things settled, so much as to make settled things strange.
+0914	Oprah Winfrey	If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.
+0915	Max Frisch	I feel fairly certain that my hatred harms me more than the people whom I hate.
+0916	Carl Sagan	If you wish to make an apple pie truly from scratch, you must first invent the universe.
+0917	James Matthew Barrie	Those who bring sunshine to the lives of others cannot keep it from themselves.
+0918	Multatuli	One does not advance the swimming abilities of ducks by throwing the eggs in the water.
+0919	Henry David Thoreau	The greatest compliment that was ever paid me was when one asked me what I thought, and attended to my answer.
+0920	Robert Orben	There's so much pollution in the air now that if it weren't for our lungs there'd be no place to put it all.
+0921	Booker T. Washington	Few things can help an individual more than to place responsibility on him, and to let him know that you trust him.
+0922	Brene Brown	Owning our story can be hard but not nearly as difficult as spending our lives running from it.
+0923	Francois de La Rochefoucauld	Those who are incapable of committing great crimes do not readily suspect them in others.
+0924	William Makepeace Thackeray	The world is a looking glass, and gives back to every man the reflection of his own face.
+0925	Albert Richard Smith	Tears are the safety valve of the heart when too much pressure is laid on it.
+0926	Samuel Johnson	I never desire to converse with a man who has written more than he has read.
+0927	David Cobitz	A committee can make a decision that is dumber than any of its members.
+0928	Jeremy Irons	We all have our time machines. Some take us back, they're called memories. Some take us forward, they're called dreams.
+0929	Jules Renard	The only man who is really free is the one who can turn down an invitation to dinner without giving an excuse.
+0930	Edmund Burke	Nobody made a greater mistake than he who did nothing because he could do only a little.
+1001	Norman R. Augustine	If stock market experts were so expert, they would be buying stock, not selling advice.
+1002	Margaret Thatcher	Any woman who understands the problems of running a home will be nearer to understanding the problems of running a country.
+1003	Rita Rudner	When I eventually met Mr. Right I had no idea that his first name was Always.
+1004	Martin Luther King	All labor that uplifts humanity has dignity and importance and should be undertaken with painstaking excellence.
+1005	Zelda Fitzgerald	Nobody has ever measured, not even poets, how much the human heart can hold.
+1006	Jane Goodall	What you do makes a difference, and you have to decide what kind of difference you want to make.
+1007	Henri Frederic Amiel	We are never more discontented with others than when we are discontented with ourselves.
+1008	Milton Friedman	One of the great mistakes is to judge policies and programs by their intentions rather than their results.
+1009	Condoleezza Rice	I firmly believe you never should spend your time being the former anything.
+1010	Mother Teresa	Spread love everywhere you go. Let no one ever come to you without leaving happier.
+1011	Ayn Rand	The question isn't who is going to let me; it's who's going to stop me.
+1012	Dr. Seuss	Today you are You, that is truer than true. There is no one alive who is Youer than You.
+1013	Antisthenes	The investigation of the meaning of words is the beginning of education.
+1014	François de La Rochefoucauld	The true way to be deceived is to think oneself more clever than others.
+1015	Baltasar Gracian	A wise man gets more use from his enemies than a fool from his friends.
+1016	Frank A. Clark	Criticism, like rain, should be gentle enough to nourish a man's growth without destroying his roots.
+1017	Henry Miller	The one thing we can never get enough of is love, and the one thing we never give enough is love.
+1018	Charles de Lint	No one else sees the world the way you do, so no one else can tell the stories that you have to tell.
+1019	Dietrich Bonhoeffer	The ultimate test of a moral society is the kind of world that it leaves to its children.
+1020	Francois de La Rochefoucauld	Almost all our faults are more pardonable than the methods we resort to to hide them.
+1021	Jennifer Lopez	Doubt is a killer. You just have to know who you are and what you stand for.
+1022	Samuel Johnson	The two most engaging powers of an author are to make new things familiar, and familiar things new.
+1023	Eleanor Roosevelt	Learn from the mistakes of others. You can't live long enough to make them all yourself.
+1024	Unknown	The difference between 'involvement' and 'commitment' is like an eggs-and-ham breakfast: the chicken was 'involved' - the pig was 'committed'.
+1025	Tennessee Williams	There is a time for departure even when there's no certain place to go.
+1026	Robert Frost	Two roads diverged in a wood, and I took the one less traveled by, and that has made all the difference.
+1027	Cesar Chavez	I became a vegetarian after realizing that animals feel afraid, cold, hungry and unhappy like we do.
+1028	Fyodor Dostoyevsky	The degree of civilization in a society can be judged by entering its prisons.
+1029	Galileo	You cannot teach a man anything; you can only help him discover it in himself.
+1030	Eleanor Roosevelt	When will our consciences grow so tender that we will act to prevent human misery rather than avenge it?
+1031	John Steinbeck	Sometimes a man wants to be stupid if it lets him do a thing his cleverness forbids.
+1101	Will Rogers	Too many people spend money they haven't earned, to buy things they don't want, to impress people they don't like.
+1102	Confucius	Those who cannot forgive others break the bridge over which they themselves must pass.
+1103	Hannah Arendt	The most radical revolutionary will become a conservative the day after the revolution.
+1104	Aristotle	We are what we repeatedly do; excellence, then, is not an act but a habit.
+1105	Maya Angelou	It's one of the greatest gifts you can give yourself, to forgive. Forgive everybody.
+1106	Scott Adams	Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep.
+1107	Friedrich Wilhelm Nietzsche	Many a man fails to become a thinker for the sole reason that his memory is too good.
+1108	Richard Whately	Everyone wishes to have truth on his side, but not everyone wishes to be on the side of truth.
+1109	Tony Gaskins	If you don't build your dream someone will hire you to help build theirs.
+1110	Margaret Mead	Never doubt that a small group of thoughtful citizens can change the world. Indeed, it is the only thing that ever has.
+1111	Amos Tversky	The secret to doing good research is always to be a little underemployed. You waste years by not being able to waste hours.
+1112	Stendhal	The shepherd always tries to persuade the sheep that their interests and his own are the same.
+1113	Friedrich Nietzsche	It is not a lack of love, but a lack of friendship, that makes unhappy marriages.
+1114	Rollo May	It is an ironic habit of human beings to run faster when we have lost our way.
+1115	Jean Cocteau	We must believe in luck. For how else can we explain the success of those we don't like?
+1116	Robert Brault	The average pencil is seven inches long, with just a half-inch eraser - in case you thought optimism was dead.
+1117	Joseph Joubert	Old age deprives the intelligent man only of qualities useless to wisdom.
+1118	Joseph Campbell	Follow your bliss and the universe will open doors for you where there were only walls.
+1119	Mark Twain	Patriotism is supporting your country all the time and the government when it deserves it.
+1120	Bill Raeder	Thought is useful when it motivates for action, and a hindrance when it substitutes for action.
+1121	Charles Simic	Inside my empty bottle I was constructing a lighthouse while all the others were making ships.
+1122	Robert Orben	Older people shouldn't eat health food, they need all the preservatives they can get.
+1123	Elizabeth Cady Stanton	I am always busy, which is perhaps the chief reason why I am always well.
+1124	Irving Berlin	Got no checkbooks, got no banks. Still I'd like to express my thanks - I've got the sun in the mornin and the moon at night.
+1125	Francois	Perfect valor is to behave, without witnesses, as one would act were all the world watching.
+1126	Carl Sandburg	Life is like an onion: You peel it off one layer at a time, and sometimes you weep.
+1127	Bertrand Russell	In all affairs it's a healthy thing now and then to hang a question mark on the things you have long taken for granted.
+1128	Golda Meir	Make the most of yourself by fanning the tiny, inner sparks of possibility into flames of achievement.
+1129	Robert Frost	Poetry is when an emotion has found its thought and the thought has found words.
+1130	William James	When you have to make a choice and don't make it, that is in itself a choice.
+1201	Josh Billings	Life consists not in holding good cards but in playing those you hold well.
+1202	Derek Bok	There is far too much law for those who can afford it and far too little for those who cannot.
+1203	Ludwig Wittgenstein	A serious and good philosophical work could be written consisting entirely of jokes.
+1204	Cary Grant	When people tell you how young you look, they are also telling you how old you are.
+1205	Nicolas de Chamfort	Conscience is a dog that does not stop us from passing but that we cannot prevent from barking.
+1206	Lillian Hellman	Since when do we have to agree with people to defend them from injustice?
+1207	John Quincy Adams	The influence of each human being on others in this life is a kind of immortality.
+1208	Joseph Addison	Three grand essentials to happiness in this life are something to do, something to love, and something to hope for.
+1209	Francis Bacon	They are ill discoverers that think there is no land, when they can see nothing but sea.
+1210	Susan Ertz	Millions long for immortality who do not know what to do with themselves on a rainy Sunday afternoon.
+1211	Woodrow Wilson	The history of liberty is a history of the limitation of government power, not the increase of it.
+1212	Arthur Schopenhauer	Obstinacy is the result of the will forcing itself into the place of the intellect.
+1213	Carl Jung	The shoe that fits one person pinches another; there is no recipe for living that suits all cases.
+1214	Georg C. Lichtenberg	It is strange that only extraordinary men make the discoveries, which later appear so easy and simple.
+1215	Joseph Joubert	The aim of an argument or discussion should not be victory, but progress.
+1216	Ezra Pound	What matters is not the idea a man holds, but the depth at which he holds it.
+1217	Zhuang Zi	People all know the usefulness of what is useful, but they do not know the usefulness of what is useless.
+1218	Marcus Tullius Cicero	It is as hard for the good to suspect evil, as it is for the bad to suspect good.
+1219	Bruce Springsteen	The best music is essentially there to provide you something to face the world with.
+1220	Ayn Rand	The question isn't who is going to let me; it's who is going to stop me.
+1221	Kabir	All know that the drop merges into the ocean but few know that the ocean merges into the drop.
+1222	Seneca	There is nothing so disagreeable, that a patient mind cannot find some solace for it.
+1223	Alan Alda	Your assumptions are your windows on the world. Scrub them off every once in a while, or the light won't come in.
+1224	Aharon Barak	Although a democracy must often fight with one hand tied behind its back, it nonetheless has the upper hand.
+1225	Oliver Wendell Holmes	A child's education should begin at least one hundred years before he is born.
+1226	William Shakespeare	The fool doth think he is wise, but the wise man knows himself to be a fool.
+1227	Michel De Montaigne	He who establishes his argument by noise and command, shows that his reason is weak.
+1228	Carlo Dossi	The best way to be more free is to grant more freedom to others.
+1229	James Thurber	It is better to have loafed and lost than never to have loafed at all.
+1230	Joseph Joubert	Questions show the mind's range, and answers its subtlety.
+1231	Kin Hubbard	Some fellows pay a compliment like they expected a receipt.

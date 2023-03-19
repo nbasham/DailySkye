@@ -14,8 +14,8 @@ struct GamePage: View {
                 VStack(spacing: 0) {
                     GeometryReader { proxy in
                         switch(viewModel.game) {
-                            case .sudoku:
-                                SudokuView(viewModel: viewModel)
+                            case .sample_game:
+                                SampleView(viewModel: viewModel)
                             default:
                                 GameView(viewModel: viewModel, size: proxy.size)
                                     .contentShape(Rectangle())
@@ -36,10 +36,26 @@ struct GamePage: View {
         }
         .sheet(isPresented: $showHelp, content: { HelpView() })
         .navigationBarTitle(viewModel.game.displayName, displayMode: .inline)
+        .navigationBarBackButtonHidden()
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbarColorScheme(.dark, for: .navigationBar)
         .toolbarBackground(viewModel.game.color, for: .navigationBar)
         .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                ZStack(alignment: .trailing) {
+                    Button(action: {
+                        viewModel.delegate?.back()
+                    }, label: {
+                        HStack {
+                            Label("back", systemImage: "chevron.left.circle.fill")
+                                .imageScale(.large)
+                            Text("back")
+                                .foregroundColor(.white)
+                                .fontWeight(.light)
+                        }
+                    })
+                }
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
                 menuView()
             }
@@ -52,8 +68,13 @@ struct GamePage: View {
             Button("Toggle settings soundOn", action: { settings.soundOn.toggle() } )
         }
         label: {
-            Label("Menu", systemImage: "info.circle.fill")
-                .imageScale(.large)
+            HStack {
+                Text("menu")
+                    .foregroundColor(.white)
+                    .fontWeight(.light)
+                Label("menu", systemImage: "info.circle.fill")
+                    .imageScale(.large)
+            }
         }
     }
 
@@ -64,14 +85,32 @@ extension GamePage {
         let game: GameDescriptor
         weak var delegate: GameService?
         @Published var showSolved = false
+        @Published var time: String = 0.timerValue
 
         init(game: GameDescriptor, delegate: GameService? = nil) {
             self.game = game
             self.delegate = delegate
         }
 
+        func startGame() {
+            delegate?.startGame()
+        }
+
+        func pause() {
+            delegate?.pause()
+        }
+
+        func resume() {
+            delegate?.resume()
+        }
+
         func solved() {
             delegate?.solved()
+        }
+
+        var puzzle: Puzzle {
+            guard let d = delegate else { fatalError() }
+            return d.puzzle()
         }
     }
 }
