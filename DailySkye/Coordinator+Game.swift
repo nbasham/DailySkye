@@ -2,7 +2,8 @@ import SwiftUI
 
 protocol GameService: AnyObject {
     func back()
-    func showHelp()
+    func showHelp(_ game: GameDescriptor)
+    func hideHelp()
     func startGame()
     func startAgain()
     func pause()
@@ -56,6 +57,14 @@ extension Coordinator: GameService {
     func puzzle() -> Puzzle {
         guard let viewModel = gameViewModel else { fatalError() }
         return gameServices.puzzleService.puzzle(game: viewModel.game)
+    }
+
+    func showHelp(_ game: GameDescriptor) {
+        gameServices.timer.pause()
+    }
+
+    func hideHelp() {
+        gameServices.timer.resume()
     }
 }
 

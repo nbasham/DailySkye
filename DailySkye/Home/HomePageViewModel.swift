@@ -36,6 +36,7 @@ class HomePageViewModel: ObservableObject {
         pickerMargin = orientation == .portrait ? 0 : logoMargin - 172
         bottomHeight = orientation == .portrait ? 144 : 60
         pickerVMargin = orientation == .portrait ? 8 : 2
+        print("pickerVMargin \(pickerVMargin)")
         pickerBallVMargin = orientation == .portrait ? 4 : 2
         nameToBallSpace = orientation == .portrait ? 12 : 18
     }

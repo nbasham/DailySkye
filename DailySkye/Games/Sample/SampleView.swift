@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SampleView: View {
-    @ObservedObject var viewModel: GamePage.ViewModel
+    @ObservedObject var viewModel: GamePageViewModel
     @EnvironmentObject var settings: Settings
     private var puzzle: SamplePuzzle {
         viewModel.puzzle as! SamplePuzzle
@@ -53,7 +53,7 @@ extension SampleView {
 
 struct SampleView_Previews: PreviewProvider {
     static var previews: some View {
-        SampleView(viewModel: GamePage.ViewModel(game: .sample_game))
+        SampleView(viewModel: GamePageViewModel(game: .sample_game))
             .environmentObject(Settings())
     }
 }

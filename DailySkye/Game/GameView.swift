@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct GameView: View {
-    @ObservedObject var viewModel: GamePage.ViewModel
+    @ObservedObject var viewModel: GamePageViewModel
     var size: CGSize
 
     var body: some View {
@@ -18,7 +18,7 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView(viewModel: GamePage.ViewModel(game: GameDescriptor.cryptogram), size: .zero)
+        GameView(viewModel: GamePageViewModel(game: GameDescriptor.cryptogram), size: .zero)
             .previewLayout(.sizeThatFits)
             .previewInterfaceOrientation(.landscapeRight)
     }

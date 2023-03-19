@@ -4,7 +4,7 @@ class Coordinator: ObservableObject {
     let settings: Settings = Settings()
     @Published var navigationStack: [GameDescriptor] = []
     internal var gamePickerViewModel = HomePageViewModel()
-    internal var gameViewModel: GamePage.ViewModel?
+    internal var gameViewModel: GamePageViewModel?
     internal let gameServices = GameServices()
     @Environment(\.safeAreaInsets) private var safeAreaInsets
 
@@ -20,7 +20,7 @@ class Coordinator: ObservableObject {
     }
 
     func startGame(_ game: GameDescriptor) -> some View {
-        gameViewModel = GamePage.ViewModel(game: game, delegate: self)
+        gameViewModel = GamePageViewModel(game: game, delegate: self)
         return GamePage(viewModel: gameViewModel!).environmentObject(settings)
     }
 }

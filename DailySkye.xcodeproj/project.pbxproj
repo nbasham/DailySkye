@@ -18,6 +18,7 @@
 		207E25DD29C681AB00FCA8BF /* PuzzleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25DC29C681AB00FCA8BF /* PuzzleService.swift */; };
 		207E25DF29C6902300FCA8BF /* sample_game_puzzles.txt in Resources */ = {isa = PBXBuildFile; fileRef = 207E25DE29C6902300FCA8BF /* sample_game_puzzles.txt */; };
 		207E25E129C690C100FCA8BF /* SamplePuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25E029C690C100FCA8BF /* SamplePuzzle.swift */; };
+		207E25E329C6950E00FCA8BF /* GamePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25E229C6950E00FCA8BF /* GamePageViewModel.swift */; };
 		20AB318129B7EA17007A48C2 /* DailySkyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */; };
 		20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318229B7EA17007A48C2 /* ContentView.swift */; };
 		20AB318529B7EA18007A48C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AB318429B7EA18007A48C2 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		207E25DC29C681AB00FCA8BF /* PuzzleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleService.swift; sourceTree = "<group>"; };
 		207E25DE29C6902300FCA8BF /* sample_game_puzzles.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample_game_puzzles.txt; sourceTree = "<group>"; };
 		207E25E029C690C100FCA8BF /* SamplePuzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePuzzle.swift; sourceTree = "<group>"; };
+		207E25E229C6950E00FCA8BF /* GamePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageViewModel.swift; sourceTree = "<group>"; };
 		209F4F0A29BB1B7800F50138 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		20AB317D29B7EA17007A48C2 /* DailySkye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailySkye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySkyeApp.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				20AB319429B80FE2007A48C2 /* GamePage.swift */,
+				207E25E229C6950E00FCA8BF /* GamePageViewModel.swift */,
 				20AB319229B80A62007A48C2 /* GameView.swift */,
 				20085B8429BB22EA00E5D573 /* GameSolvedView.swift */,
 			);
@@ -254,6 +257,7 @@
 				20AB318129B7EA17007A48C2 /* DailySkyeApp.swift in Sources */,
 				207E25E129C690C100FCA8BF /* SamplePuzzle.swift in Sources */,
 				207E25D829C64A3300FCA8BF /* SecondsTimer.swift in Sources */,
+				207E25E329C6950E00FCA8BF /* GamePageViewModel.swift in Sources */,
 				207E25DD29C681AB00FCA8BF /* PuzzleService.swift in Sources */,
 				20AB319329B80A62007A48C2 /* GameView.swift in Sources */,
 				20AB319729B8FA26007A48C2 /* Coordinator.swift in Sources */,

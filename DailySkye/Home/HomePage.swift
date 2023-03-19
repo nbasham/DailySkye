@@ -139,10 +139,13 @@ struct HomePage_Previews: PreviewProvider {
 
 struct HelpView: View {
     @Environment(\.dismiss) var dismiss
+    var game: GameDescriptor?
+    var completion: (() -> Void)?
 
     var body: some View {
         Button("Dismiss Me") {
             dismiss()
+            completion?()
         }
     }
 }
