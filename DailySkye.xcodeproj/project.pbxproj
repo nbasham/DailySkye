@@ -20,6 +20,9 @@
 		207E25E129C690C100FCA8BF /* SamplePuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25E029C690C100FCA8BF /* SamplePuzzle.swift */; };
 		207E25E329C6950E00FCA8BF /* GamePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25E229C6950E00FCA8BF /* GamePageViewModel.swift */; };
 		207E25E529C6A75F00FCA8BF /* GameStateStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25E429C6A75F00FCA8BF /* GameStateStorage.swift */; };
+		207E25E729C7B6DD00FCA8BF /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25E629C7B6DD00FCA8BF /* ShareView.swift */; };
+		207E25E929C8E95800FCA8BF /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25E829C8E95800FCA8BF /* History.swift */; };
+		207E25EB29C8E97E00FCA8BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E25EA29C8E97E00FCA8BF /* Extensions.swift */; };
 		20AB318129B7EA17007A48C2 /* DailySkyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */; };
 		20AB318329B7EA17007A48C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB318229B7EA17007A48C2 /* ContentView.swift */; };
 		20AB318529B7EA18007A48C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AB318429B7EA18007A48C2 /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		207E25E029C690C100FCA8BF /* SamplePuzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePuzzle.swift; sourceTree = "<group>"; };
 		207E25E229C6950E00FCA8BF /* GamePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePageViewModel.swift; sourceTree = "<group>"; };
 		207E25E429C6A75F00FCA8BF /* GameStateStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateStorage.swift; sourceTree = "<group>"; };
+		207E25E629C7B6DD00FCA8BF /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		207E25E829C8E95800FCA8BF /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		207E25EA29C8E97E00FCA8BF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		209F4F0A29BB1B7800F50138 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		20AB317D29B7EA17007A48C2 /* DailySkye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailySkye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySkyeApp.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 			children = (
 				207E25E429C6A75F00FCA8BF /* GameStateStorage.swift */,
 				207E25D729C64A3300FCA8BF /* SecondsTimer.swift */,
+				207E25E629C7B6DD00FCA8BF /* ShareView.swift */,
 				207E25D929C67FED00FCA8BF /* Puzzles */,
 			);
 			path = Services;
@@ -153,7 +160,9 @@
 				207E25C429C0090B00FCA8BF /* Coordinator+App.swift */,
 				207E25C629C00B8400FCA8BF /* Coordinator+Game.swift */,
 				20AB318029B7EA17007A48C2 /* DailySkyeApp.swift */,
+				207E25EA29C8E97E00FCA8BF /* Extensions.swift */,
 				20AB318E29B7EA30007A48C2 /* GameDescriptor.swift */,
+				207E25E829C8E95800FCA8BF /* History.swift */,
 				207E25CE29C3F49300FCA8BF /* Home */,
 				207E25CF29C3F4B000FCA8BF /* Game */,
 				207E25C829C0561800FCA8BF /* Settings.swift */,
@@ -245,9 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207E25EB29C8E97E00FCA8BF /* Extensions.swift in Sources */,
 				207E25C529C0090B00FCA8BF /* Coordinator+App.swift in Sources */,
 				207E25DB29C6800100FCA8BF /* Puzzle.swift in Sources */,
 				20AB319529B80FE2007A48C2 /* GamePage.swift in Sources */,
+				207E25E729C7B6DD00FCA8BF /* ShareView.swift in Sources */,
 				207E25D529C6478B00FCA8BF /* SampleView.swift in Sources */,
 				20AB319929B92F57007A48C2 /* HomeGamePickerRowView.swift in Sources */,
 				20AB318F29B7EA30007A48C2 /* GameDescriptor.swift in Sources */,
@@ -258,6 +269,7 @@
 				20AB319129B7EB9B007A48C2 /* HomePage.swift in Sources */,
 				207E25C729C00B8400FCA8BF /* Coordinator+Game.swift in Sources */,
 				20AB318129B7EA17007A48C2 /* DailySkyeApp.swift in Sources */,
+				207E25E929C8E95800FCA8BF /* History.swift in Sources */,
 				207E25E129C690C100FCA8BF /* SamplePuzzle.swift in Sources */,
 				207E25D829C64A3300FCA8BF /* SecondsTimer.swift in Sources */,
 				207E25E329C6950E00FCA8BF /* GamePageViewModel.swift in Sources */,

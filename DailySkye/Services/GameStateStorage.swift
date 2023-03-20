@@ -38,14 +38,7 @@ class GameStateStorage {
     }
 
     private static func key(for game: GameDescriptor) -> String {
-        "\(GameStateStorage.ddmm)_\(game.id)_state"
-    }
-
-    private static var ddmm: String {
-        let dc = Calendar.current.dateComponents([.month, .day], from: Date())
-        let day = String(format: "%02d", dc.day!)
-        let month = String(format: "%02d", dc.month!)
-        return "\(month)\(day)"
+        "\(Date.ddmm)_\(game.id)_state"
     }
 
     private static func load<T: Decodable>(key: String, defaults: UserDefaults = UserDefaults.standard) -> T? {

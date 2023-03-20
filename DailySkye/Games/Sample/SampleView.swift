@@ -14,21 +14,33 @@ struct SampleView: View {
                 Text("\(puzzle.author)")
                 Text("\(puzzle.quote)")
                 Text("\(viewModel.time)")
+                Text("almostSolve: \(viewModel.almostSolve ? "true" : "false")")
                 Text("Test publish, use menu: sound on \(settings.soundOn ? "true" : "false")")
                 Button(action: {
                     withAnimation {
-                        viewModel.pause()
+                        viewModel.almostSolve = true
                     }
                 }, label: {
-                    Text("Pause game")
+                    Text("Almost solve")
                 })
-                Button(action: {
-                    withAnimation {
-                        viewModel.resume()
-                    }
-                }, label: {
-                    Text("Resume game")
-                })
+                if viewModel.showPauseButton {
+                    Button(action: {
+                        withAnimation {
+                            viewModel.pause()
+                        }
+                    }, label: {
+                        Text("Pause game")
+                    })
+                }
+                if viewModel.showRusumeButton {
+                    Button(action: {
+                        withAnimation {
+                            viewModel.resume()
+                        }
+                    }, label: {
+                        Text("Resume game")
+                    })
+                }
                 Button(action: {
                     withAnimation {
                         viewModel.solved()

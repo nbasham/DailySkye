@@ -34,7 +34,14 @@ struct GamePage: View {
                 }
            }
         }
+        .onAppear {
+            viewModel.startEventListening()
+        }
+        .onDisappear {
+            viewModel.stopEventListening()
+        }
         .sheet(isPresented: $showHelp, content: { viewModel.showHelp() })
+        .sheet(isPresented: $viewModel.showShare, content: { viewModel.showShareView() })
         .navigationBarTitle(viewModel.game.displayName, displayMode: .inline)
         .navigationBarBackButtonHidden()
         .toolbarBackground(.visible, for: .navigationBar)
@@ -69,6 +76,7 @@ struct GamePage: View {
     private func menuView() -> some View {
         Menu {
             Button("Help", action: { showHelp = true } )
+            Button("Almost solve", action: { viewModel.almostSolve = true } )
             Button("Toggle settings soundOn", action: { settings.soundOn.toggle() } )
         }
         label: {

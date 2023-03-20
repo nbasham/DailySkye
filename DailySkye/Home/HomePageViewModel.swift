@@ -15,7 +15,8 @@ class HomePageViewModel: ObservableObject {
     @Published var pickerVMargin: CGFloat = 4
     @Published var nameToBallSpace: CGFloat = 18
     var isPortrait: Bool { UIDevice.current.orientation == .portrait }
-    lazy var maxGridHeight = CGFloat(44 * games.count)
+    lazy var maxGridHeight = CGFloat((isPad ? 64 : 44) * games.count)
+    var isPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
 
     init(games: [GameDescriptor] = [.cryptogram, .crypto_families, .quotefalls, .sudoku, .word_search, .memory], delegate: AppService? = nil) {
         self.games = games
@@ -34,9 +35,8 @@ class HomePageViewModel: ObservableObject {
         guard orientation != .unknown else { return }
         logoMargin = orientation == .portrait ? 124 : 200
         pickerMargin = orientation == .portrait ? 0 : logoMargin - 172
-        bottomHeight = orientation == .portrait ? 144 : 60
-        pickerVMargin = orientation == .portrait ? 8 : 2
-        print("pickerVMargin \(pickerVMargin)")
+        bottomHeight = isPad ? 144 : (orientation == .portrait ? 144 : 60)
+        pickerVMargin = isPad ? 12 : (orientation == .portrait ? 8 : 2)
         pickerBallVMargin = orientation == .portrait ? 4 : 2
         nameToBallSpace = orientation == .portrait ? 12 : 18
     }

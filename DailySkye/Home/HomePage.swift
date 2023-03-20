@@ -2,6 +2,7 @@ import SwiftUI
 
 struct HomePage: View {
     @ObservedObject var viewModel: HomePageViewModel
+    var safeAreaInsets = EdgeInsets()
     @State var showHelp: Bool = false
 
     var body: some View {
@@ -51,21 +52,23 @@ struct HomePage: View {
     }
 
     private var bottomView: some View {
-        ZStack(alignment: .leading) {
+        return ZStack(alignment: .leading) {
             Color("top").opacity(0.5)
                 .ignoresSafeArea()
                 .frame(height: viewModel.bottomHeight)
-            HStack(spacing: 0) {
+            HStack(spacing: 12) {
                 Circle()
                     .foregroundColor(Color("top"))
-                    .offset(x: -viewModel.bottomHeight/2.0)
+                    .aspectRatio(1, contentMode: .fit)
                     .ignoresSafeArea()
                     .frame(height: viewModel.bottomHeight)
+                    .offset(x: -viewModel.bottomHeight/2 - safeAreaInsets.leading)
                 factioidView()
                     .frame(maxHeight: viewModel.bottomHeight - 8)
+                    .padding(.trailing)
             }
             //  TODO Need a solution that leaves the trailing margin in tact
-            .offset(x: -viewModel.bottomHeight/2.0)
+//            .offset(x: -viewModel.bottomHeight/2.0)
         }
     }
 
@@ -96,7 +99,9 @@ struct HomePage: View {
         let message: LocalizedStringKey = """
         Visit Apple: [click here](https://apple.com) This is **bold** text, this is *italic* text, and this is ***bold, italic*** text. ~~A strikethrough example~~ `Monospaced works too` 🙃 I recently befriended my neighbor and who is my dad’s age and in a wheelchair. He is so lonely because his wife died right around the time he lost his second leg.
         """
-        return Text(message).minimumScaleFactor(0.1).padding(.horizontal, 0).padding(.top, 8)
+        return Text(message).minimumScaleFactor(0.1)
+            .font(.system(size: viewModel.isPad ? 18 : 14))
+            .padding(.horizontal, 0).padding(.top, 8)
     }
 
     private func menuView() -> some View {

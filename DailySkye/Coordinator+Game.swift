@@ -8,6 +8,7 @@ protocol GameService: AnyObject {
     func startAgain()
     func pause()
     func resume()
+    func almostSolve()
     func solveRequest()
     func solved()
     func didSolve(_ game: GameDescriptor)
@@ -22,7 +23,7 @@ struct GameServices {
 extension Coordinator: GameService {
 
     func back() {
-        if !gameViewModel.isSolved {
+        if !gameViewModel.isSolved && gameViewModel.game == .sample_game {
             GameStateStorage.saveState(game: gameViewModel.game, puzzleId: gameViewModel.puzzle.id, seconds: gameServices.timer.seconds)
         }
         navigationStack.remove(at: 0)
@@ -47,6 +48,10 @@ extension Coordinator: GameService {
 
     func resume() {
         gameServices.timer.resume()
+    }
+
+    func almostSolve() {
+        gameViewModel.almostSolve = true
     }
 
     func solveRequest() {
