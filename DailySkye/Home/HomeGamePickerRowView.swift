@@ -27,24 +27,35 @@ struct HomeGamePickerRowView: View {
     }
 
     var gameBall: some View {
-        return Circle()
+        Circle()
             .fill(
                 game.color
             )
             .aspectRatio(1, contentMode: .fit)
             .rotationEffect(.degrees(-45))
             .overlay(
-                Text("play")
-                    .minimumScaleFactor(0.2)
-                    .lineLimit(1)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 13, design: .rounded))
-                    .foregroundColor(.white.opacity(0.8))
-                    .offset(y: -1)
-                    .padding(3) // pushes 'play' from circle edge
+                gameBallFill
             )
             .rotationEffect(.degrees(viewModel.animateBall == game && viewModel.isRotating ? 5*360 : 0))
             .offset(x: viewModel.animateBall == game ? UIScreen.main.bounds.width : 0)
+    }
+
+    @ViewBuilder
+    var gameBallFill: some View {
+        if History.isCompleted(game: game) {
+            Image(systemName: "checkmark")
+                .bold()
+                .foregroundColor(.white)
+        } else {
+            Text("play")
+                .minimumScaleFactor(0.2)
+                .lineLimit(1)
+                .fontWeight(.semibold)
+                .font(.system(size: 13, design: .rounded))
+                .foregroundColor(.white.opacity(0.8))
+                .offset(y: -1)
+                .padding(3) // pushes 'play' from circle edge
+        }
     }
 
     private var ballGradient: Gradient {
@@ -64,51 +75,5 @@ struct GameListRowView_Previews: PreviewProvider {
         .padding(.leading, 100)
             .previewInterfaceOrientation(.landscapeRight)
             .previewLayout(.sizeThatFits)
-    }
-}
-
-extension UIColor {
-    private func makeColor(componentDelta: CGFloat) -> UIColor {
-        var red: CGFloat = 0
-        var blue: CGFloat = 0
-        var green: CGFloat = 0
-        var alpha: CGFloat = 0
-
-        // Extract r,g,b,a components from the
-        // current UIColor
-        getRed(
-            &red,
-            green: &green,
-            blue: &blue,
-            alpha: &alpha
-        )
-
-        // Create a new UIColor modifying each component
-        // by componentDelta, making the new UIColor either
-        // lighter or darker.
-        return UIColor(
-            red: add(componentDelta, toComponent: red),
-            green: add(componentDelta, toComponent: green),
-            blue: add(componentDelta, toComponent: blue),
-            alpha: alpha
-        )
-    }
-}
-
-extension UIColor {
-    // Add value to component ensuring the result is
-    // between 0 and 1
-    private func add(_ value: CGFloat, toComponent: CGFloat) -> CGFloat {
-        return max(0, min(1, toComponent + value))
-    }
-}
-
-extension UIColor {
-    func lighter(componentDelta: CGFloat = 0.1) -> UIColor {
-        return makeColor(componentDelta: componentDelta)
-    }
-
-    func darker(componentDelta: CGFloat = 0.1) -> UIColor {
-        return makeColor(componentDelta: -1*componentDelta)
     }
 }

@@ -6,6 +6,7 @@ class Coordinator: ObservableObject {
     internal var gamePickerViewModel = HomePageViewModel()
     internal var gameViewModel: GamePageViewModel!
     internal let gameServices = GameServices()
+    internal var currentGame: GameAPI?
     @Environment(\.safeAreaInsets) private var safeAreaInsets
 
     func start(_ proxy: GeometryProxy? = nil) -> some View {

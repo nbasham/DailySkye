@@ -30,8 +30,11 @@ extension Coordinator: GameService {
     }
 
     func startGame() {
-        gameServices.timer.start{ time in
-            self.gameViewModel?.time = time.timerValue
+        // slight delay before starting clock
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.gameServices.timer.start{ time in
+                self.gameViewModel?.time = time.timerValue
+            }
         }
         let state = GameStateStorage.loadState(game: gameViewModel.game)
         if let state = state {
@@ -43,6 +46,7 @@ extension Coordinator: GameService {
     func startAgain() { }
 
     func pause() {
+        //  TODO show pause screen
         gameServices.timer.pause()
     }
 
@@ -56,9 +60,11 @@ extension Coordinator: GameService {
 
     func solveRequest() {
         gameServices.timer.pause()
+        //  TODO inform game
     }
 
     func solved() {
+        History.completed(game: gameViewModel.game)
         gameServices.timer.pause()
         GameStateStorage.deleteAllState(for: gameViewModel.game)
         withAnimation {
